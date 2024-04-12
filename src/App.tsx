@@ -8,8 +8,16 @@ import Training from "./pages/Training"
 import IndianMethod from "./pages/IndianMethod"
 import FoundersAndHistory from "./pages/FoundersAndHistory"
 import Welcome from "./pages/Welcome"
+import "aos/dist/aos.css"
+import { useEffect } from "react"
+import AOS from "aos"
 
 function App() {
+  useEffect(() => {
+    AOS.init()
+    AOS.refresh()
+  }, [])
+
   return (
     <>
       <BrowserRouter>

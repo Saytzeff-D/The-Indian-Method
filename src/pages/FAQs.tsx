@@ -11,7 +11,7 @@ const FAQs = () => {
         <h3 className="uppercase text-primary text-sm tracking-[0.15em]">
           The Indian method
         </h3>
-        <h3 className="text-primary font-semibold max-w-lg text-5xl ">
+        <h3 className="text-primary font-semibold max-w-lg text-3xl md:text-5xl ">
           Les questions les plus fréquentes
         </h3>
         <p className="max-w-[34rem] mt-12 text-[#030303]">

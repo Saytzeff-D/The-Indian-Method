@@ -34,10 +34,10 @@ const Programme = () => {
       <Navbar />
       <div>
         <div className="appx flex flex-col items-center text-center gap-8 py-10">
-          <h3 className="font-semibold text-5xl text-dark">
+          <h3 className="font-semibold text-3xl md:text-5xl text-dark">
             Programme de Parrainage
           </h3>
-          <p className="max-w-2xl text-sec text-lg">
+          <p className="max-w-2xl text-sec md:text-lg">
             Découvrez notre Programme de Parrainage exclusif chez Indian Method
             ! En tant qu'adepte de notre plateforme, vous pouvez désormais
             profiter de multiples avantages en recommandant nos formations à
@@ -88,19 +88,21 @@ const Programme = () => {
             Structure de Récompense
           </h3>
 
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             {structure.map((each, i) => (
               <div key={i + each.title} className="py-5">
                 <div
-                  className={`bg-primary h-1 relative ${i == 0 ? "ml-10" : ""}`}
+                  className={`bg-primary h-1 relative ${
+                    i == 0 ? "md:ml-10" : ""
+                  }`}
                 >
                   <span
                     className={`absolute w-6 h-6 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full text-white text-[.55rem] bg-primary ${
                       i == 3
-                        ? "right-0"
+                        ? "md:right-0"
                         : i == 0
                         ? "-left-1"
-                        : "left-11 -translate-x-1/2"
+                        : "left-2 md:left-11 -translate-x-1/2"
                     }`}
                   >
                     15%
@@ -113,7 +115,7 @@ const Programme = () => {
                 >
                   <h3
                     className={`ext-sm text-[#0D0B26] font-medium ${
-                      i == 3 ? "text-right" : ""
+                      i == 3 ? "md:text-right" : ""
                     }`}
                   >
                     {each.title}
@@ -189,10 +191,10 @@ const Programme = () => {
         </div>
 
         <div className="appx flex flex-col items-center text-center gap-8 py-10">
-          <h3 className="font-semibold text-3xl text-dark">
+          <h3 className="font-semibold text-2xl md:text-3xl text-dark">
             Pourquoi Rejoindre Notre Programme ?
           </h3>
-          <p className="max-w-4xl mt-4 pb-10 text-lg">
+          <p className="max-w-4xl mt-4 pb-10 md:text-lg">
             Rejoindre notre Programme de Parrainage offre des avantages
             attrayants pour les passionnés qui souhaitent non seulement
             promouvoir des formations de qualité, mais aussi bénéficier d'une

@@ -19,10 +19,10 @@ const OurApplication = () => {
       <Navbar />
       <div>
         <div className="appx flex flex-col items-center text-center gap-8 pb-10 pt-16">
-          <h3 className="font-semibold text-5xl text-dark">
+          <h3 className="font-semibold text-3xl md:text-5xl text-dark">
             Notre application
           </h3>
-          <p className="max-w-2xl text-sec text-lg">
+          <p className="max-w-2xl text-sec md:text-lg">
             En plus d’avoir acces à des modules extrêmement poussé dans nos
             formations, vous allez pouvoir avoir acces également à notre suite
             d’applications.
@@ -45,7 +45,7 @@ const OurApplication = () => {
       </div>
       <div className="bg-[#F9FAFB] py-10">
         <div className="appx flex flex-col items-center gap-3 md:gap-10">
-          <h3 className="font-inter font-medium text-[#475467]">
+          <h3 className="font-inter text-center font-medium text-[#475467]">
             Notre suite de logiciel est compris dans notre application !
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 lg:gap-20 xl:gap-28">
@@ -73,7 +73,7 @@ const OurApplication = () => {
         <h3 className=" font-semibold text-3xl">
           Analytics that feels like it’s from the future
         </h3>
-        <p className="text-lg text-[#475467] max-w-2xl">
+        <p className="md:text-lg text-[#475467] max-w-2xl">
           Powerful, self-serve product and growth analytics to help you convert,
           engage, and retain more users. Trusted by over 4,000 startups.
         </p>

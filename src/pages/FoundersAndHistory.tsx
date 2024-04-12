@@ -17,7 +17,7 @@ const FoundersAndHistory = () => {
 
       <div className="appx grid md:grid-cols-2 min-h-[70vh] gap-4 lg:gap-10">
         <div className="flex flex-col gap-6 my-auto">
-          <h3 className="text-5xl font-semibold text-dark">
+          <h3 className="md:text-5xl mt-10 md:mt-0 text-3xl font-semibold text-dark">
             The Indian Method
           </h3>
           <p className="text-tsec">
@@ -42,7 +42,7 @@ const FoundersAndHistory = () => {
       </div>
 
       <div className="appx flex flex-col items-center">
-        <h3 className="text-3xl font-semibold text-center">
+        <h3 className="text-2xl md:text-3xl mt-10 md:mt-0 font-semibold text-center">
           Les fondateurs & CEO
         </h3>
 

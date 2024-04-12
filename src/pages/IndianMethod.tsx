@@ -10,16 +10,16 @@ const IndianMethod = () => {
     <div className="flex min-h-screen flex-col">
       <Navbar />
 
-      <div className="appx grid md:grid-cols-2 min-h-[70vh] gap-4">
+      <div className="appx w-full text-center md:text-left grid md:grid-cols-2 min-h-[70vh] gap-4">
         <div className="flex flex-col gap-6 my-auto">
-          <h3 className="text-5xl font-semibold text-dark">
+          <h3 className="text-3xl md:text-5xl font-semibold text-dark">
             The Indian Method
           </h3>
-          <p className="text-tsec">
+          <p className="text-tsec max-w-lg">
             Avec The Indian Method, accédez à un réseau d'experts indiens pour
             concrétiser vos visions créatives sans vous ruiner.
           </p>
-          <div className="flex items-center gap-6 ">
+          <div className="flex items-center justify-center md:justify-start flex-wrap gap-3 md:gap-6 ">
             <button className="px-10 flex items-center gap-3 bg-primary rounded-full text-white py-2.5 font-medium">
               Commencer
               <svg
@@ -118,11 +118,11 @@ const IndianMethod = () => {
 
       <div className="relative mb-20">
         <div className="bg-[#F7FFFD]">
-          <div className="appx flex flex-col gap-4 items-center relative z-20 pt-20">
+          <div className="appx flex flex-col text-center gap-4 items-center relative z-20 pt-20">
             <span className="px-5 flex items-center gap-3 bg-primary rounded-full text-white py-1.5 font-medium">
               Nos Formations
             </span>
-            <h3 className="font-semibold my-3 text-5xl text-primary">
+            <h3 className="font-semibold my-3 text-3xl md:text-5xl text-primary">
               THE INDIAN METHOD
             </h3>
             <h3 className="font-semibold text-dark text-lg">

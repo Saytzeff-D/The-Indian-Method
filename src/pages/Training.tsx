@@ -60,7 +60,7 @@ const Training = () => {
           Formation Essentiel
         </h3>
 
-        <div className="relative py-28 my-10">
+        <div className="relative py-4 md:py-28 my-10">
           <div className="bg-[#EFF0F6] w-[40%] -z-10 right-0 top-0 h-full absolute hidden md:block"></div>
           <div className="flex appx">
             <div className="md:pr-10 lg:pr-20 w-full flex md:w-[50%]">
@@ -84,7 +84,7 @@ const Training = () => {
                   </svg>
                   Rejoindre nos formation
                 </h3>
-                <h3 className="font-semibold text-5xl text-dark2">
+                <h3 className="font-semibold text-3xl md:text-5xl text-dark2">
                   Lancez vous facilement dans The Indian Method
                 </h3>
                 <p className="text-[#6F6C90]">
@@ -98,7 +98,7 @@ const Training = () => {
                       <h3 className="text-dark2 font-semibold">
                         Application de Formation
                       </h3>
-                      <p className="text-tsec mt-2">
+                      <p className="text-tsec text-sm md:text-base mt-2">
                         Débloquez le plein potentiel de votre formation avec
                         notre application : une passerelle vers des modules
                         complets, des applications performantes pour affiner vos
@@ -113,7 +113,7 @@ const Training = () => {
                       <h3 className="text-dark2 font-semibold">
                         Accompagnement complet
                       </h3>
-                      <p className="text-tsec mt-2">
+                      <p className="text-tsec text-sm md:text-base mt-2">
                         À vos côtés à chaque étape avec un accompagnement qui
                         fait toute la différence, nous vous offrons un
                         itinéraire sur-mesure vers le succès : personnalisé,
@@ -170,10 +170,10 @@ const Training = () => {
 
       <div>
         <div className="appx flex flex-col items-center text-center gap-8 py-20">
-          <h3 className="font-semibold text-5xl text-dark">
+          <h3 className="font-semibold text-3xl md:text-5xl text-dark">
             Notre application
           </h3>
-          <p className="max-w-2xl text-sec text-lg">
+          <p className="max-w-2xl text-sec md:text-lg">
             En plus d’avoir acces à des modules extrêmement poussé dans nos
             formations, vous allez pouvoir avoir acces également à notre suite
             d’applications.
@@ -268,7 +268,7 @@ const Training = () => {
               </div>
             </div>
           </div>
-          <p className="text-sm italic text-tsec md:p-16">
+          <p className="text-sm italic text-tsec pt-4 md:p-16">
             Compétences : Repérer le client idéal ; Enquêter sur son client ;
             Reconnaitre les besoins exactes de son client...
           </p>
