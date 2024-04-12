@@ -17,6 +17,7 @@ function App() {
           <Route Component={IndianMethod} path="indian-method" />
           <Route Component={BecomeSponsor} path="become-sponsor" />
           <Route Component={FAQs} path="faqs" />
+          <Route Component={Programme} path="contact" />
           <Route Component={OurApplication} path="our-application" />
         </Routes>
       </BrowserRouter>
