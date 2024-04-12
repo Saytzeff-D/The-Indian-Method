@@ -6,10 +6,12 @@ import illustration1 from "../assets/illustration1.png"
 import illustration2 from "../assets/illustration2.png"
 import MemoSpeed from "../components/svgs/Speed"
 import Footer from "../components/Footer"
+import maclayout from "../assets/macbook-layout.png"
+import { Link } from "react-router-dom"
 
 const Programme = () => {
   return (
-    <div>
+    <div className="">
       <Navbar />
       <div>
         <div className="appx flex flex-col items-center text-center gap-8 py-10">
@@ -25,7 +27,22 @@ const Programme = () => {
             votre engagement. Rejoignez-nous dans cette aventure de partage de
             connaissances et de succès !
           </p>
-          <button className="brand-btn">Devenir parrain</button>
+          <Link to={"/become-sponsor"} className="brand-btn">
+            Devenir parrain
+          </Link>
+
+          <div className="mt-6 mb-2 relative max-w-[40rem]">
+            <img
+              src={maclayout}
+              alt="Macbook Layout"
+              className="w-full pointer-events-none"
+            />
+            <img
+              src={illustration1}
+              alt="App Dashboard"
+              className="absolute w-[81%] top-[4%] left-[10%] pointer-events-none"
+            />
+          </div>
         </div>
 
         <div className="flex flex-col gap-6 items-center">
@@ -88,12 +105,14 @@ const Programme = () => {
             ))}
           </div>
 
-          <button className="brand-btn">Devenir parrain</button>
+          <Link to={"/become-sponsor"} className="brand-btn">
+            Devenir parrain
+          </Link>
         </div>
 
         <div className="py-20">
           <div className="overflow-hidden flex items-center justify-center gap-x-10 md:gap-x-20 lg:gap-x-32 gap-y-6">
-            <div className="w-full max-w-[50%] flex justify-end">
+            <div className="w-full md:max-w-[50%] flex md:justify-end px-5">
               <div className="flex flex-col gap-2 max-w-sm">
                 <MemoBars />
                 <h3 className="mt-2 font-semibold text-2xl text-dark">
@@ -112,13 +131,16 @@ const Programme = () => {
               </div>
             </div>
 
-            <div className="w-full max-w-[50%] border-[3px] max-h-[25rem] border-black rounded-l-lg -mr-2 overflow-hidden">
-              <img src={illustration1} className="w-full " />
+            <div className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-l-lg -mr-2 overflow-hidden">
+              <img
+                src={illustration1}
+                className="h-[30rem] object-cover object-left-top w-full"
+              />
             </div>
           </div>
 
           <div className="overflow-hidden mt-10 flex flex-row-reverse items-center justify-center gap-x-10 md:gap-x-20 lg:gap-x-32 gap-y-6">
-            <div className="w-full max-w-[50%] flex justify-start">
+            <div className="w-full md:max-w-[50%] flex justify-start px-5">
               <div className="flex flex-col gap-2 max-w-sm">
                 <MemoSpeed />
                 <h3 className="mt-2 font-semibold text-2xl text-dark">
@@ -138,8 +160,11 @@ const Programme = () => {
               </div>
             </div>
 
-            <div className="w-full max-w-[50%] border-[3px] max-h-[25rem] border-black rounded-r-lg -ml-2 overflow-hidden">
-              <img src={illustration2} className="w-full " />
+            <div className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-r-lg -ml-2 overflow-hidden">
+              <img
+                src={illustration2}
+                className="h-[30rem] object-cover object-right-top w-full"
+              />
             </div>
           </div>
         </div>
@@ -160,7 +185,9 @@ const Programme = () => {
             de performance, mais vous faites également partie d'une communauté
             dynamique, partageant connaissances et succès
           </p>
-          <button className="brand-btn">Devenir parrain</button>
+          <Link to={"/become-sponsor"} className="brand-btn">
+            Devenir parrain
+          </Link>
         </div>
       </div>
 

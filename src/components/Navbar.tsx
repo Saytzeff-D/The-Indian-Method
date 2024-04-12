@@ -17,7 +17,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex bg-white appx text-center sticky top-0 appx items-center gap-6 justify-center py-5">
+      <div className="flex z-40 bg-white px-5 text-center sticky top-0 items-center gap-6 justify-center py-5">
         {navLinks.map((each) => (
           <Link
             to={each.path}

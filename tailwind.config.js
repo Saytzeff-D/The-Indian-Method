@@ -8,8 +8,10 @@ export default {
     extend: {
       colors: {
         dark: "#10191A",
+        dark2: "#170F49",
         primary: "#17AD8B",
         sec: "#475467",
+        tsec: "#6F6C90",
       },
       fontFamily: {
         inter: ["Inter", ...defaultTheme.fontFamily.sans],
