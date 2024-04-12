@@ -4,6 +4,7 @@ import Programme from "./pages/Programme"
 import BecomeSponsor from "./pages/BecomeSponsor"
 import FAQs from "./pages/FAQs"
 import OurApplication from "./pages/OurApplication"
+import Training from "./pages/Training"
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route Component={Programme} path="" />
-          <Route Component={Programme} path="our-training" />
+          <Route Component={Training} path="our-training" />
           <Route Component={BecomeSponsor} path="become-sponsor" />
           <Route Component={FAQs} path="faqs" />
           <Route Component={OurApplication} path="our-application" />

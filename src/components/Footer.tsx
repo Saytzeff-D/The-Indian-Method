@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import MemoDiscord from "./svgs/Discord"
 import MemoInstagram from "./svgs/Instagram"
 import MemoTiktok from "./svgs/Tiktok"
@@ -11,10 +12,30 @@ const Footer = () => {
           Copyright © {new Date().getFullYear()} Technoméo
         </p>
         <div className="flex items-center gap-4 justify-center w-fit">
-          <MemoInstagram />
-          <MemoDiscord />
-          <MemoYoutube />
-          <MemoTiktok />
+          <Link
+            to="https://www.tiktok.com/@manusinauro"
+            target="_blank"
+            className="text-white hover:text-slate-300 transition"
+          >
+            <MemoInstagram />
+          </Link>
+          <Link
+            to="https://discord.gg/rRUmkpdkC3"
+            target="_blank"
+            className="text-white hover:text-slate-300 transition"
+          >
+            <MemoDiscord />
+          </Link>
+          <button className="text-white hover:text-slate-300 transition">
+            <MemoYoutube />
+          </button>
+          <Link
+            to="https://www.instagram.com/manusinauro/"
+            target="_blank"
+            className="text-white hover:text-slate-300 transition"
+          >
+            <MemoTiktok />
+          </Link>
         </div>
       </div>
     </div>

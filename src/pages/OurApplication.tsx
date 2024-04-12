@@ -17,7 +17,6 @@ const OurApplication = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-
       <div>
         <div className="appx flex flex-col items-center text-center gap-8 pb-10 pt-16">
           <h3 className="font-semibold text-5xl text-dark">
@@ -44,7 +43,6 @@ const OurApplication = () => {
           </div>
         </div>
       </div>
-
       <div className="bg-[#F9FAFB] py-10">
         <div className="appx flex flex-col items-center gap-3 md:gap-10">
           <h3 className="font-inter font-medium text-[#475467]">
@@ -66,7 +64,6 @@ const OurApplication = () => {
           </div>
         </div>
       </div>
-
       <div className="appx font-inter flex flex-col text-center gap-4 items-center">
         <h3 className=" font-medium text-[#475467] my-20">
           Accedez à tout nos applications supplémentaires depuis nos formations
@@ -81,7 +78,6 @@ const OurApplication = () => {
           engage, and retain more users. Trusted by over 4,000 startups.
         </p>
       </div>
-
       <div className="py-20">
         <div className="overflow-hidden flex items-center justify-center gap-x-10 md:gap-x-20 lg:gap-x-32 gap-y-6">
           <div className="w-full md:max-w-[50%] flex md:justify-end px-5">
@@ -231,7 +227,6 @@ const OurApplication = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   )

@@ -12,7 +12,7 @@
     @apply whitespace-nowrap;
   }
   .appx {
-    @apply px-5 max-w-[80rem] mx-auto;
+    @apply px-5 max-w-[78rem] mx-auto;
   }
   .brand-btn {
     @apply px-5 py-3 rounded-lg text-white bg-primary;
