@@ -244,7 +244,7 @@ const Training = () => {
 
             <div>
               <h3 className="text-lg font-semibold ">
-                Vocal Trouver un client (1h) 
+                Vocal Trouver un client (1h)
               </h3>
               <p className="max-w-lg text-tsec my-4">
                 À vos côtés à chaque étape avec un accompagnement qui fait toute
@@ -255,11 +255,11 @@ const Training = () => {
               <div className="flex flex-col gap-8 mt-6">
                 <div className="flex items-center gap-3">
                   <MemoCamera />
-                  <span> Approfondir la démarche téléphonique ( 30min ) </span>
+                  <span> Approfondir la démarche téléphonique ( 30min ) </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MemoCamera />
-                  <span> S’organiser Facilement sur Excel ( 12min ) </span>
+                  <span> S’organiser Facilement sur Excel ( 12min ) </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MemoBookCheck />
