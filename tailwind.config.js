@@ -7,10 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        prmorange: "#EB7A08",
-        prmorange2: "#F15A29",
-        greytext: "#5E5E6B",
-        prmgreen: "#11AA45",
+        dark: "#10191A",
+        primary: "#17AD8B",
+        sec: "#475467",
       },
       fontFamily: {
         inter: ["Inter", ...defaultTheme.fontFamily.sans],

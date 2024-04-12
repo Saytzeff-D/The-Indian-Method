@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --prm: #17ad8b;
+}
+
+@layer components {
+  button,
+  a {
+    @apply whitespace-nowrap;
+  }
+  .appx {
+    @apply px-5 max-w-[80rem] mx-auto;
+  }
+  .brand-btn {
+    @apply px-5 py-3 rounded-lg text-white bg-primary;
+  }
+
+  .rm-drag {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+
+  .overflowed {
+    overflow: auto;
+  }
+
+  .overflowed::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: transparent;
+  }
+
+  .overflowed::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: #ccc;
+  }
+  .no-scrollbar::-webkit-scrollbar,
+  .no-scrollbar::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.fade {
+  animation: fadeAnimation 1s ease-in-out;
+  --translate-from: 0;
+}
+
+.fadeup {
+  animation: fadeAnimation 0.7s ease-in-out forwards;
+  --translate-from: 2rem;
+}
+
+.fadedown {
+  animation: fadeAnimation 0.7s ease-in-out forwards;
+  --translate-from: -2rem;
+}
+
+@keyframes fadeAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(var(--translate-from));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
