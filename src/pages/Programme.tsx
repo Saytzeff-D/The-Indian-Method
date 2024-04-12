@@ -9,9 +9,9 @@ import Footer from "../components/Footer"
 import maclayout from "../assets/macbook-layout.png"
 import { Link } from "react-router-dom"
 import rep1 from "../assets/material.png"
-import rep2 from "../assets/Suivi-en-Temps-Réel.png"
-import rep3 from "../assets/Paiements-Sécurisés-et-Réguliers.png"
-import rep4 from "../assets/Support-Dédié.png"
+import rep2 from "../assets/material2.png"
+import rep3 from "../assets/material3.png"
+import rep4 from "../assets/material4.png"
 
 const Programme = () => {
   const advantages = [
