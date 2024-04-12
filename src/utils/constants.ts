@@ -1,8 +1,3 @@
-import rep1 from "../assets/Matériel-de-Promotion-Exclusif.png";
-import rep2 from "../assets/Suivi-en-Temps-Réel.png";
-import rep3 from "../assets/Paiements-Sécurisés-et-Réguliers.png";
-import rep4 from "../assets/Support-Dédié.png";
-
 export const navLinks = [
 	{ label: "Accueil", path: "/welcome", },
 	{ label: "Indian Method", path: "/indian-method", },
@@ -13,13 +8,6 @@ export const navLinks = [
 	{ label: "Nos formations", path: "/our-training", },
 ]
 
-
-export const advantages = [
-	{ label: "Matériel de Promotion Exclusif", img: rep1 },
-	{ label: "Suivi en Temps Réel", img: rep2 },
-	{ label: "Paiements Sécurisés et Réguliers", img: rep3 },
-	{ label: "Support Dédié", img: rep4 },
-]
 
 export const structure = [
 	{ title: "Statut Parrain débutant", desc: "Recevez 15% de la valeur de chaque vente réalisée grâce à votre recommandation." },

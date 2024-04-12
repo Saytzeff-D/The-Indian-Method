@@ -1,15 +1,34 @@
 import Navbar from "../components/Navbar"
 import MemoArrRight from "../components/svgs/ArrRight"
 import MemoBars from "../components/svgs/Bars"
-import { advantages, structure } from "../utils/constants"
+import { structure } from "../utils/constants"
 import illustration1 from "../assets/illustration1.png"
 import illustration2 from "../assets/illustration2.png"
 import MemoSpeed from "../components/svgs/Speed"
 import Footer from "../components/Footer"
 import maclayout from "../assets/macbook-layout.png"
 import { Link } from "react-router-dom"
+import rep1 from "../assets/material.png"
+import rep2 from "../assets/Suivi-en-Temps-Réel.png"
+import rep3 from "../assets/Paiements-Sécurisés-et-Réguliers.png"
+import rep4 from "../assets/Support-Dédié.png"
 
 const Programme = () => {
+  const advantages = [
+    {
+      label: "Matériel de Promotion Exclusif",
+      img: <img src={rep1} alt="" className="w-14" />,
+    },
+    {
+      label: "Suivi en Temps Réel",
+      img: <img src={rep2} alt="" className="w-14" />,
+    },
+    {
+      label: "Paiements Sécurisés et Réguliers",
+      img: <img src={rep3} alt="" className="w-14" />,
+    },
+    { label: "Support Dédié", img: <img src={rep4} alt="" className="w-14" /> },
+  ]
   return (
     <div className="">
       <Navbar />
@@ -56,7 +75,7 @@ const Programme = () => {
                   key={each.label + i}
                   className="flex max-w-[14rem] w-full h-full justify-center text-center flex-col rounded-lg items-center px-5 py-10 gap-4 bg-[#D9D9D954]"
                 >
-                  <img src={each.img} alt="" className="w-14" />
+                  {each.img}
                   <p>{each.label}</p>
                 </div>
               ))}
