@@ -5,7 +5,7 @@ import { navLinks } from "../utils/constants"
 import { Link } from "react-router-dom"
 
 const Navbar = () => {
-  const [navIsOpen, setNavIsOpen] = useState(false)
+  // const [navIsOpen, setNavIsOpen] = useState(false)
   const { pathname } = useLocation()
 
   return (
