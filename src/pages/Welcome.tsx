@@ -217,7 +217,7 @@ const Welcome = () => {
             <div
               data-aos="zoom-in"
               key={each.label + i}
-              className="flex h-full justify-center text-center flex-col rounded-lg items-center py-10 gap-4 bg-[#D9D9D954]"
+              className="flex h-full justify-center text-center flex-col rounded-lg items-center py-10 gap-2 bg-[#D9D9D954]"
             >
               {each.img}
               <p>{each.label}</p>
