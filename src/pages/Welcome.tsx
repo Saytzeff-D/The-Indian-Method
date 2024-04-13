@@ -212,7 +212,7 @@ const Welcome = () => {
           indiens ?
         </h3>
 
-        <div className="appx w-full mb-20 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 xl:gap-14">
+        <div className="appx w-full mb-20 grid grid-cols-2 md:grid-cols-4 gap-2 lg:gap-10 xl:gap-14">
           {advantages.map((each, i) => (
             <div
               data-aos="zoom-in"
