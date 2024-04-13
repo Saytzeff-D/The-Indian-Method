@@ -16,7 +16,7 @@ const FoundersAndHistory = () => {
       <Navbar />
 
       <div className="appx grid md:grid-cols-2 min-h-[70vh] gap-4 lg:gap-10">
-        <div className="flex flex-col gap-6 my-auto">
+        <div data-aos="fade-right" className="flex flex-col gap-6 my-auto">
           <h3 className="md:text-5xl mt-10 md:mt-0 text-3xl font-semibold text-dark">
             The Indian Method
           </h3>
@@ -32,7 +32,7 @@ const FoundersAndHistory = () => {
             liberté professionnelle, financière et géographique.
           </p>
         </div>
-        <div className="my-auto relative">
+        <div data-aos="fade-left" className="my-auto relative">
           <img
             src={man1}
             className="w-full object-cover my-auto pointer-events-none"
@@ -42,11 +42,17 @@ const FoundersAndHistory = () => {
       </div>
 
       <div className="appx flex flex-col items-center">
-        <h3 className="text-2xl md:text-3xl mt-10 md:mt-0 font-semibold text-center">
+        <h3
+          data-aos="fade-up"
+          className="text-2xl md:text-3xl mt-10 md:mt-0 font-semibold text-center"
+        >
           Les fondateurs & CEO
         </h3>
 
-        <div className="grid py-20 md:grid-cols-3 max-w-[60rem] gap-10">
+        <div
+          data-aos="fade-up"
+          className="grid py-20 md:grid-cols-3 max-w-[60rem] gap-10"
+        >
           <Founder
             name="Roméo"
             position="Fondateur"
@@ -68,7 +74,10 @@ const FoundersAndHistory = () => {
       </div>
 
       <div className="appx flex flex-col items-center">
-        <h3 className="text-3xl font-semibold text-center mb-20">
+        <h3
+          data-aos="fade-up"
+          className="text-3xl font-semibold text-center mb-20"
+        >
           Notre Histoire
         </h3>
 
@@ -107,7 +116,7 @@ const FoundersAndHistory = () => {
             desc: "Lancement de l’application “Indian Method”",
           },
         ].map((each) => (
-          <div className="w-full grid grid-cols-12">
+          <div data-aos="fade-in" className="w-full grid grid-cols-12">
             <h3 className="col-span-4 md:col-span-6 mt-14 text-right px-4 md:px-10 text-3xl text-primary font-semibold">
               {each.year}
             </h3>
@@ -120,7 +129,10 @@ const FoundersAndHistory = () => {
       </div>
 
       <div className="appx flex flex-col items-center pt-20 pb-5">
-        <h3 className="text-3xl bg-white h-7 flex items-center font-semibold text-center mb-20  relative">
+        <h3
+          data-aos="fade-in"
+          className="text-3xl bg-white h-7 flex items-center font-semibold text-center mb-20  relative"
+        >
           Nos valeurs
           <span className="w-24 skew-x-[25deg] -z-10 left-1/2 top-1/2 -rotate-[60deg] -translate-x-1/2 -translate-y-1/2 absolute h-1.5 bg-primary"></span>
         </h3>
@@ -152,7 +164,11 @@ const FoundersAndHistory = () => {
               title: "Communauté",
             },
           ].map((each) => (
-            <div className="flex flex-col gap-4">
+            <div
+              data-aos="zoom-in"
+              key={each.title}
+              className="flex flex-col gap-4"
+            >
               {each.img}
               <h3 className="text-xl font-medium">{each.title}</h3>
               <p className="text-[#929292]">{each.desc}</p>
@@ -160,7 +176,9 @@ const FoundersAndHistory = () => {
           ))}
         </div>
 
-        <button className="brand-btn">Nous rejoindre </button>
+        <button className="brand-btn" data-aos="fade-in">
+          Nous rejoindre{" "}
+        </button>
       </div>
 
       <Footer />

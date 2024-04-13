@@ -56,7 +56,10 @@ const Training = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="my-10">
-        <h3 className="text-4xl border-b-2 border-[#EFF0F6] pb-6 text-center font-medium font-dm">
+        <h3
+          data-aos="fade-in"
+          className="text-4xl border-b-2 border-[#EFF0F6] pb-6 text-center font-medium font-dm"
+        >
           Formation Essentiel
         </h3>
 
@@ -65,7 +68,10 @@ const Training = () => {
           <div className="flex appx">
             <div className="md:pr-10 lg:pr-20 w-full flex md:w-[50%]">
               <div className="flex flex-col gap-5 my-auto max-w-lg">
-                <h3 className="uppercase text-primary flex items-center gap-1 font-semibold">
+                <h3
+                  data-aos="fade-up"
+                  className="uppercase text-primary flex items-center gap-1 font-semibold"
+                >
                   <svg
                     width="23"
                     height="3"
@@ -84,15 +90,18 @@ const Training = () => {
                   </svg>
                   Rejoindre nos formation
                 </h3>
-                <h3 className="font-semibold text-3xl md:text-5xl text-dark2">
+                <h3
+                  data-aos="fade-up"
+                  className="font-semibold text-3xl md:text-5xl text-dark2"
+                >
                   Lancez vous facilement dans The Indian Method
                 </h3>
-                <p className="text-[#6F6C90]">
+                <p data-aos="fade-up" className="text-[#6F6C90]">
                   Nos formations sont un Pas en Avant Vers le Succès : Coaching
                   Individuel et Ressources Exclusives.
                 </p>
                 <div className="flex flex-col gap-4">
-                  <div className="flex gap-4">
+                  <div data-aos="fade-up" className="flex gap-4">
                     <Check />
                     <div>
                       <h3 className="text-dark2 font-semibold">
@@ -107,7 +116,7 @@ const Training = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex gap-4">
+                  <div data-aos="fade-up" className="flex gap-4">
                     <Check />
                     <div>
                       <h3 className="text-dark2 font-semibold">
@@ -125,7 +134,7 @@ const Training = () => {
               </div>
             </div>
 
-            <div className="hidden md:block w-[50%]">
+            <div className="hidden md:block w-[50%]" data-aos="fade-left">
               <div className="shadow max-w-[22rem] lg:ml-10 rounded-2xl overflow-hidden bg-white">
                 <div className="relative overflow-hidden bg-primary h-[20rem]">
                   <div className="bg-white/10 h-full w-[70%] top-32 left-20 shadow-xl absolute rounded-3xl rotate-[38.5deg]"></div>
@@ -145,11 +154,13 @@ const Training = () => {
       </div>
 
       <div className="appx flex text-center flex-col gap-3 w-full">
-        <h3 className="font-semibold text-primary">Features</h3>
-        <h3 className="text-3xl font-semibold text-dark2">
+        <h3 data-aos="zoom-in" className="font-semibold text-primary">
+          Features
+        </h3>
+        <h3 data-aos="fade-up" className="text-3xl font-semibold text-dark2">
           Analytics that feels like it’s from the future
         </h3>
-        <p className="max-w-xl text-tsec mx-auto">
+        <p data-aos="fade-up" className="max-w-xl text-tsec mx-auto">
           Powerful, self-serve product and growth analytics to help you convert,
           engage, and retain more users. Trusted by over 4,000 startups.
         </p>
@@ -157,6 +168,7 @@ const Training = () => {
         <div className="grid w-full gap-5 lg:gap-10 xl:gap-x-20 grid-cols-1 sm:[grid-template-columns:repeat(auto-fill,minmax(18rem,1fr))] my-10">
           {features.map((each) => (
             <div
+              data-aos="zoom-in"
               key={each.title}
               className="flex flex-col items-center gap-2 text-center"
             >
@@ -170,17 +182,22 @@ const Training = () => {
 
       <div>
         <div className="appx flex flex-col items-center text-center gap-8 py-20">
-          <h3 className="font-semibold text-3xl md:text-5xl text-dark">
+          <h3
+            data-aos="fade-down"
+            className="font-semibold text-3xl md:text-5xl text-dark"
+          >
             Notre application
           </h3>
-          <p className="max-w-2xl text-sec md:text-lg">
+          <p data-aos="fade-down" className="max-w-2xl text-sec md:text-lg">
             En plus d’avoir acces à des modules extrêmement poussé dans nos
             formations, vous allez pouvoir avoir acces également à notre suite
             d’applications.
           </p>
-          <button className="brand-btn">En savoir plus</button>
+          <button data-aos="fade-in" className="brand-btn">
+            En savoir plus
+          </button>
 
-          <div className="mt-6 mb-2 relative max-w-[40rem]">
+          <div data-aos="fade-up" className="mt-6 mb-2 relative max-w-[40rem]">
             <img
               src={maclayout}
               alt="Macbook Layout"
@@ -196,11 +213,16 @@ const Training = () => {
       </div>
 
       <div className="appx flex flex-col items-center gap-4 w-full">
-        <h3 className="uppercase font-semibold text-primary">
+        <h3 data-aos="fade-up" className="uppercase font-semibold text-primary">
           QU’apprenons nous ?{" "}
         </h3>
-        <h3 className="text-3xl font-semibold text-center">Le programme </h3>
-        <div className="flex items-center flex-wrap my-3 gap-2 md:gap-5 justify-center">
+        <h3 data-aos="fade-up" className="text-3xl font-semibold text-center">
+          Le programme{" "}
+        </h3>
+        <div
+          data-aos="fade-in"
+          className="flex items-center flex-wrap my-3 gap-2 md:gap-5 justify-center"
+        >
           {lists.map((each) => (
             <span className="flex items-center gap-3">
               {each.icon} <span className="text-tsec">{each.label}</span>
@@ -208,7 +230,7 @@ const Training = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-8 w-full mt-20 mb-5">
+        <div data-aos="fade-up" className="grid grid-cols-8 w-full mt-20 mb-5">
           <div className="bg-[#DCE3E9] h-1 relative">
             <div className="bg-primary h-full w-1/2">
               <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-sm rounded-full flex items-center justify-center h-7 text-white w-7 min-w-7">
@@ -227,7 +249,10 @@ const Training = () => {
           ))}
         </div>
 
-        <div className="bg-[#F7F7F7] rounded-xl w-full p-4 mb-10">
+        <div
+          data-aos="fade-up"
+          className="bg-[#F7F7F7] rounded-xl w-full p-4 mb-10"
+        >
           <div className="md:p-16 flex gap-5">
             <svg
               width="29"

@@ -8,7 +8,10 @@ const Review = ({
   label?: string
 }) => {
   return (
-    <div className="[box-shadow:34.85px_29.63px_48.34px_0px#3366FF0D] text-center w-full rounded-lg mt-5 border border-[#E5F4F2] flex flex-col gap-3 items-center px-6 py-8">
+    <div
+      data-aos="zoom-in"
+      className="[box-shadow:34.85px_29.63px_48.34px_0px#3366FF0D] text-center w-full rounded-lg mt-5 border border-[#E5F4F2] flex flex-col gap-3 items-center px-6 py-8"
+    >
       <img
         src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D"
         alt=""

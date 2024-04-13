@@ -77,7 +77,11 @@ const Welcome = () => {
       <Navbar />
 
       <div className="appx flex flex-col items-center">
-        <h3 className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark">
+        <h3
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark"
+        >
           Qu'est ce que The{" "}
           <span className="relative inline-block">
             Indian Method
@@ -87,7 +91,11 @@ const Welcome = () => {
         </h3>
 
         <div className="grid md:grid-cols-2 pt-10 gap-4 lg:gap-10">
-          <div className="flex text-center md:text-left flex-col gap-6 my-auto">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="flex text-center md:text-left flex-col gap-6 my-auto"
+          >
             <p className="text-dark md:text-lg">
               La "Young Indian Method" est une méthode d'entrepreneuriat qui
               implique l'embauche de jeunes travailleurs indiens pour travailler
@@ -105,7 +113,11 @@ const Welcome = () => {
               </button>
             </div>
           </div>
-          <div className="my-auto relative">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="my-auto relative"
+          >
             <img
               src={man1}
               className="w-full object-cover my-auto pointer-events-none"
@@ -128,11 +140,14 @@ const Welcome = () => {
           </div>
         </div>
 
-        <h3 className="text-3xl md:text-5xl text-center mb-10 md:mb-24 mt-20 md:mt-40 font-semibold text-dark">
+        <h3
+          data-aos="fade-up"
+          className="text-3xl md:text-5xl text-center mb-10 md:mb-24 mt-20 md:mt-40 font-semibold text-dark"
+        >
           Comment ça marche ?
         </h3>
 
-        <div>
+        <div data-aos="fade-in">
           <div className="flex flex-col md:flex-row">
             {structure.map((each, i) => (
               <div key={i + each.title} className="py-5">
@@ -185,7 +200,10 @@ const Welcome = () => {
           </div>
         </div>
 
-        <h3 className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark">
+        <h3
+          data-aos="fade-up"
+          className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark"
+        >
           Que peuvent faire nos{" "}
           <span className="relative inline-block">
             développeurs
@@ -197,6 +215,7 @@ const Welcome = () => {
         <div className="appx w-full mb-20 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 xl:gap-14">
           {advantages.map((each, i) => (
             <div
+              data-aos="zoom-in"
               key={each.label + i}
               className="flex h-full justify-center text-center flex-col rounded-lg items-center py-10 gap-4 bg-[#D9D9D954]"
             >
@@ -206,9 +225,14 @@ const Welcome = () => {
           ))}
         </div>
 
-        <button className="brand-btn">En savoir plus !</button>
+        <button className="brand-btn" data-aos="fade-in">
+          En savoir plus !
+        </button>
 
-        <h3 className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark">
+        <h3
+          data-aos="fade-up"
+          className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark"
+        >
           Quelques{" "}
           <span className="relative inline-block">
             réalisations
@@ -218,16 +242,23 @@ const Welcome = () => {
         </h3>
 
         <img
+          data-aos="zoom-out-up"
           src={vidimage}
           className="rounded-xl w-full object-cover pointer-events-none"
           alt=""
         />
 
-        <h3 className="font-bold text-xl md:text-3xl mt-20 max-w-lg text-center">
+        <h3
+          data-aos="fade-in"
+          className="font-bold text-xl md:text-3xl mt-20 max-w-lg text-center"
+        >
           Un site réalisé par un développeur Indien pour 150$
         </h3>
 
-        <h3 className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark">
+        <h3
+          data-aos="fade-up"
+          className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark"
+        >
           Quelques retours de nos élèves
         </h3>
 
@@ -274,7 +305,9 @@ const Welcome = () => {
           ))}
         </div>
 
-        <button className="brand-btn">Nous rejoindre </button>
+        <button data-aos="fade-in" className="brand-btn">
+          Nous rejoindre{" "}
+        </button>
       </div>
 
       <Footer />

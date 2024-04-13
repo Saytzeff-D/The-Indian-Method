@@ -8,18 +8,27 @@ const FAQs = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex flex-col gap-4 items-center font-dm appx text-center justify-center w-full min-h-[70vh]">
-        <h3 className="uppercase text-primary text-sm tracking-[0.15em]">
+        <h3
+          data-aos="fade-down"
+          className="uppercase text-primary text-sm tracking-[0.15em]"
+        >
           The Indian method
         </h3>
-        <h3 className="text-primary font-semibold max-w-lg text-3xl md:text-5xl ">
+        <h3
+          data-aos="fade-down"
+          className="text-primary font-semibold max-w-lg text-3xl md:text-5xl "
+        >
           Les questions les plus fréquentes
         </h3>
-        <p className="max-w-[34rem] mt-12 text-[#030303]">
+        <p data-aos="fade-up" className="max-w-[34rem] mt-12 text-[#030303]">
           Si votre question apparait pas dans les FAQ et que le Chabot n’est pas
           dans la capacité de vus répondre, posez votre question si-dessous un
           mail vous sera envoyé pour la réponse !
         </p>
-        <div className="max-w-[50rem] gap-4 flex items-center pl-6 pr-2 py-2 border border-[#EFF0F6] rounded-full w-full [box-shadow:0px_8px_25px_0px#0D0A2C0F]">
+        <div
+          data-aos="fade-up"
+          className="max-w-[50rem] gap-4 flex items-center pl-6 pr-2 py-2 border border-[#EFF0F6] rounded-full w-full [box-shadow:0px_8px_25px_0px#0D0A2C0F]"
+        >
           <input
             className="w-full outline-none"
             type="text"
@@ -29,7 +38,10 @@ const FAQs = () => {
             envoyer
           </button>
         </div>
-        <div className="text-primary text-sm flex items-center gap-2">
+        <div
+          data-aos="fade-up"
+          className="text-primary text-sm flex items-center gap-2"
+        >
           <svg
             width="18"
             height="18"
@@ -54,7 +66,10 @@ const FAQs = () => {
       </div>
 
       <div className="appx font-dm w-full">
-        <div className="faqs-head  flex items-center justify-between rounded-xl px-4 py-2">
+        <div
+          data-aos="fade-in"
+          className="faqs-head  flex items-center justify-between rounded-xl px-4 py-2"
+        >
           <h3 className="font-semibold text-2xl">FAQ Formation </h3>
 
           <div className="max-w-[20rem] gap-4 flex items-center pl-6 pr-2 py-2 border border-[#EFF0F6] rounded-full w-full [box-shadow:0px_8px_25px_0px#0D0A2C0F]">
@@ -69,7 +84,10 @@ const FAQs = () => {
           </div>
         </div>
 
-        <div className="rounded-lg bg-[#F7F7FB] py-20 mt-6 flex gap-5 flex-col px-3 items-center">
+        <div
+          data-aos="fade-up"
+          className="rounded-lg bg-[#F7F7FB] py-20 mt-6 flex gap-5 flex-col px-3 items-center"
+        >
           {trainingFaqs.map((each, i) => (
             <Disclosure key={i + "tfaq"}>
               {({ open }) => (
@@ -127,7 +145,10 @@ const FAQs = () => {
       </div>
 
       <div className="appx font-dm w-full mt-16 mb-20">
-        <div className="faqs-head  flex items-center justify-between rounded-xl px-4 py-2">
+        <div
+          data-aos="fade-in"
+          className="faqs-head  flex items-center justify-between rounded-xl px-4 py-2"
+        >
           <h3 className="font-semibold text-2xl">FAQ Indian Method </h3>
 
           <div className="max-w-[20rem] gap-4 flex items-center pl-6 pr-2 py-2 border border-[#EFF0F6] rounded-full w-full [box-shadow:0px_8px_25px_0px#0D0A2C0F]">
@@ -142,7 +163,10 @@ const FAQs = () => {
           </div>
         </div>
 
-        <div className="rounded-lg bg-[#F7F7FB] py-20 mt-6 flex gap-5 flex-col px-3 items-center">
+        <div
+          data-aos="fade-up"
+          className="rounded-lg bg-[#F7F7FB] py-20 mt-6 flex gap-5 flex-col px-3 items-center"
+        >
           {indianMethodFaqs.map((each, i) => (
             <Disclosure key={i + "tfaq"}>
               {({ open }) => (

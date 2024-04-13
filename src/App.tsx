@@ -1,4 +1,10 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
+import {
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom"
 import "./App.css"
 import Programme from "./pages/Programme"
 import BecomeSponsor from "./pages/BecomeSponsor"
@@ -14,9 +20,22 @@ import AOS from "aos"
 
 function App() {
   useEffect(() => {
-    AOS.init()
+    AOS.init({ duration: 1000 })
     AOS.refresh()
   }, [])
+
+  const { pathname } = useLocation()
+  useEffect(() => {
+    // indow.scrollTo(0, 0);    w
+    const scrollToTop = () => {
+      const c = document.documentElement.scrollTop || document.body.scrollTop
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop)
+        window.scrollTo(0, c - c / 8)
+      }
+    }
+    scrollToTop()
+  }, [pathname])
 
   return (
     <>

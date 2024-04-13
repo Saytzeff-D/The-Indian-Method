@@ -19,17 +19,22 @@ const OurApplication = () => {
       <Navbar />
       <div>
         <div className="appx flex flex-col items-center text-center gap-8 pb-10 pt-16">
-          <h3 className="font-semibold text-3xl md:text-5xl text-dark">
+          <h3
+            data-aos="fade-down"
+            className="font-semibold text-3xl md:text-5xl text-dark"
+          >
             Notre application
           </h3>
-          <p className="max-w-2xl text-sec md:text-lg">
+          <p data-aos="fade-down" className="max-w-2xl text-sec md:text-lg">
             En plus d’avoir acces à des modules extrêmement poussé dans nos
             formations, vous allez pouvoir avoir acces également à notre suite
             d’applications.
           </p>
-          <button className="brand-btn">Nous rejoindre</button>
+          <button data-aos="fade-in" className="brand-btn">
+            Nous rejoindre
+          </button>
 
-          <div className="mt-6 mb-2 relative max-w-[40rem]">
+          <div data-aos="fade-up" className="mt-6 mb-2 relative max-w-[40rem]">
             <img
               src={maclayout}
               alt="Macbook Layout"
@@ -45,42 +50,50 @@ const OurApplication = () => {
       </div>
       <div className="bg-[#F9FAFB] py-10">
         <div className="appx flex flex-col items-center gap-3 md:gap-10">
-          <h3 className="font-inter text-center font-medium text-[#475467]">
+          <h3
+            data-aos="fade-in"
+            className="font-inter text-center font-medium text-[#475467]"
+          >
             Notre suite de logiciel est compris dans notre application !
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 lg:gap-20 xl:gap-28">
-            <div>
+            <div data-aos="fade-in">
               <img src={logo1} alt="" className="h-full rm-drag" />
             </div>
-            <div>
+            <div data-aos="fade-in">
               <img src={logo2} alt="" className="h-full rm-drag" />
             </div>
-            <div>
+            <div data-aos="fade-in">
               <img src={logo3} alt="" className="h-full rm-drag" />
             </div>
-            <div>
+            <div data-aos="fade-in">
               <img src={logo4} alt="" className="h-full rm-drag" />
             </div>
           </div>
         </div>
       </div>
       <div className="appx font-inter flex flex-col text-center gap-4 items-center">
-        <h3 className=" font-medium text-[#475467] my-20">
+        <h3 data-aos="fade-in" className=" font-medium text-[#475467] my-20">
           Accedez à tout nos applications supplémentaires depuis nos formations
         </h3>
 
-        <h3 className="text-primary font-semibold text-sm ">Features</h3>
-        <h3 className=" font-semibold text-3xl">
+        <h3 data-aos="zoom-in" className="text-primary font-semibold text-sm ">
+          Features
+        </h3>
+        <h3 data-aos="fade-up" className=" font-semibold text-3xl">
           Analytics that feels like it’s from the future
         </h3>
-        <p className="md:text-lg text-[#475467] max-w-2xl">
+        <p data-aos="fade-up" className="md:text-lg text-[#475467] max-w-2xl">
           Powerful, self-serve product and growth analytics to help you convert,
           engage, and retain more users. Trusted by over 4,000 startups.
         </p>
       </div>
       <div className="py-20">
         <div className="overflow-hidden flex items-center justify-center gap-x-10 md:gap-x-20 lg:gap-x-32 gap-y-6">
-          <div className="w-full md:max-w-[50%] flex md:justify-end px-5">
+          <div
+            data-aos="zoom-out-right"
+            className="w-full md:max-w-[50%] flex md:justify-end px-5"
+          >
             <div className="flex flex-col gap-2 max-w-md">
               <MemoMailRound />
               <h3 className="mt-2 font-semibold text-2xl text-dark">
@@ -120,7 +133,10 @@ const OurApplication = () => {
             </div>
           </div>
 
-          <div className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-l-lg -mr-2 overflow-hidden">
+          <div
+            data-aos="fade-left"
+            className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-l-lg -mr-2 overflow-hidden"
+          >
             <img
               src={illustration4}
               className="h-[30rem] object-cover object-left-top w-full"
@@ -129,7 +145,10 @@ const OurApplication = () => {
         </div>
 
         <div className="overflow-hidden mt-20 flex flex-row-reverse items-center justify-center gap-x-10 md:gap-x-20 lg:gap-x-32 gap-y-6">
-          <div className="w-full md:max-w-[50%] flex justify-start px-5">
+          <div
+            data-aos="zoom-out-left"
+            className="w-full md:max-w-[50%] flex justify-start px-5"
+          >
             <div className="flex flex-col gap-2 max-w-md">
               <MemoSpeed />
               <h3 className="mt-2 font-semibold text-2xl text-dark">
@@ -169,7 +188,10 @@ const OurApplication = () => {
             </div>
           </div>
 
-          <div className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-r-lg -ml-2 overflow-hidden">
+          <div
+            data-aos="fade-right"
+            className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-r-lg -ml-2 overflow-hidden"
+          >
             <img
               src={illustration5}
               className="h-[30rem] object-cover object-right-top w-full"
@@ -178,7 +200,10 @@ const OurApplication = () => {
         </div>
 
         <div className="overflow-hidden mt-20 flex items-center justify-center gap-x-10 md:gap-x-20 lg:gap-x-32 gap-y-6">
-          <div className="w-full md:max-w-[50%] flex md:justify-end px-5">
+          <div
+            data-aos="zoom-out-right"
+            className="w-full md:max-w-[50%] flex md:justify-end px-5"
+          >
             <div className="flex flex-col gap-2 max-w-md">
               <MemoBars />
               <h3 className="mt-2 font-semibold text-2xl text-dark">
@@ -219,7 +244,10 @@ const OurApplication = () => {
             </div>
           </div>
 
-          <div className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-l-lg -mr-2 overflow-hidden">
+          <div
+            data-aos="fade-left"
+            className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-l-lg -mr-2 overflow-hidden"
+          >
             <img
               src={illustration6}
               className="h-[30rem] object-cover object-left-top w-full"

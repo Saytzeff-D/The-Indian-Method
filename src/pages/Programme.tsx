@@ -34,10 +34,13 @@ const Programme = () => {
       <Navbar />
       <div>
         <div className="appx flex flex-col items-center text-center gap-8 py-10">
-          <h3 className="font-semibold text-3xl md:text-5xl text-dark">
+          <h3
+            data-aos="fade-down"
+            className="font-semibold text-3xl md:text-5xl text-dark"
+          >
             Programme de Parrainage
           </h3>
-          <p className="max-w-2xl text-sec md:text-lg">
+          <p className="max-w-2xl text-sec md:text-lg" data-aos="fade-down">
             Découvrez notre Programme de Parrainage exclusif chez Indian Method
             ! En tant qu'adepte de notre plateforme, vous pouvez désormais
             profiter de multiples avantages en recommandant nos formations à
@@ -46,11 +49,11 @@ const Programme = () => {
             votre engagement. Rejoignez-nous dans cette aventure de partage de
             connaissances et de succès !
           </p>
-          <Link to={"/become-sponsor"} className="brand-btn">
+          <Link data-aos="fade-in" to={"/become-sponsor"} className="brand-btn">
             Devenir parrain
           </Link>
 
-          <div className="mt-6 mb-2 relative max-w-[40rem]">
+          <div data-aos="fade-up" className="mt-6 mb-2 relative max-w-[40rem]">
             <img
               src={maclayout}
               alt="Macbook Layout"
@@ -65,13 +68,14 @@ const Programme = () => {
         </div>
 
         <div className="flex flex-col gap-6 items-center">
-          <h3 className="font-medium text-3xl text-center">
+          <h3 data-aos="fade-in" className="font-medium text-3xl text-center">
             Quels sont les avantages ?
           </h3>
           <div className="bg-[#EEECEC5C] w-full py-20">
             <div className="appx grid place-items-center grid-cols-2 md:grid-cols-4 gap-4">
               {advantages.map((each, i) => (
                 <div
+                  data-aos="fade-up"
                   key={each.label + i}
                   className="flex max-w-[14rem] w-full h-full justify-center text-center flex-col rounded-lg items-center px-5 py-10 gap-4 bg-[#D9D9D954]"
                 >
@@ -84,11 +88,11 @@ const Programme = () => {
         </div>
 
         <div className="flex appx py-20 flex-col gap-6 gap-y-20 items-center">
-          <h3 className="font-medium text-3xl text-center">
+          <h3 data-aos="fade-up" className="font-medium text-3xl text-center">
             Structure de Récompense
           </h3>
 
-          <div className="flex flex-col md:flex-row">
+          <div data-aos="fade-in" className="flex flex-col md:flex-row">
             {structure.map((each, i) => (
               <div key={i + each.title} className="py-5">
                 <div
@@ -126,14 +130,17 @@ const Programme = () => {
             ))}
           </div>
 
-          <Link to={"/become-sponsor"} className="brand-btn">
+          <Link data-aos="fade-in" to={"/become-sponsor"} className="brand-btn">
             Devenir parrain
           </Link>
         </div>
 
         <div className="py-20">
           <div className="overflow-hidden flex items-center justify-center gap-x-10 md:gap-x-20 lg:gap-x-32 gap-y-6">
-            <div className="w-full md:max-w-[50%] flex md:justify-end px-5">
+            <div
+              data-aos="zoom-out-right"
+              className="w-full md:max-w-[50%] flex md:justify-end px-5"
+            >
               <div className="flex flex-col gap-2 max-w-sm">
                 <MemoBars />
                 <h3 className="mt-2 font-semibold text-2xl text-dark">
@@ -152,7 +159,10 @@ const Programme = () => {
               </div>
             </div>
 
-            <div className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-l-lg -mr-2 overflow-hidden">
+            <div
+              data-aos="fade-left"
+              className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-l-lg -mr-2 overflow-hidden"
+            >
               <img
                 src={illustration1}
                 className="h-[30rem] object-cover object-left-top w-full"
@@ -161,7 +171,10 @@ const Programme = () => {
           </div>
 
           <div className="overflow-hidden mt-10 flex flex-row-reverse items-center justify-center gap-x-10 md:gap-x-20 lg:gap-x-32 gap-y-6">
-            <div className="w-full md:max-w-[50%] flex justify-start px-5">
+            <div
+              data-aos="zoom-out-left"
+              className="w-full md:max-w-[50%] flex justify-start px-5"
+            >
               <div className="flex flex-col gap-2 max-w-sm">
                 <MemoSpeed />
                 <h3 className="mt-2 font-semibold text-2xl text-dark">
@@ -181,7 +194,10 @@ const Programme = () => {
               </div>
             </div>
 
-            <div className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-r-lg -ml-2 overflow-hidden">
+            <div
+              data-aos="fade-right"
+              className="hidden md:block w-full max-w-[50%] border-[3px] border-black rounded-r-lg -ml-2 overflow-hidden"
+            >
               <img
                 src={illustration2}
                 className="h-[30rem] object-cover object-right-top w-full"
@@ -190,7 +206,10 @@ const Programme = () => {
           </div>
         </div>
 
-        <div className="appx flex flex-col items-center text-center gap-8 py-10">
+        <div
+          data-aos="fade-up"
+          className="appx flex flex-col items-center text-center gap-8 py-10"
+        >
           <h3 className="font-semibold text-2xl md:text-3xl text-dark">
             Pourquoi Rejoindre Notre Programme ?
           </h3>
