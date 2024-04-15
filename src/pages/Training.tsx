@@ -247,7 +247,7 @@ const Training = () => {
       <div id="training" className="my-10">
         <h3
           data-aos="fade-in"
-          className="text-4xl border-b-2 border-[#EFF0F6] pb-6 text-center font-medium font-dm"
+          className="text-2xl md:text-4xl border-b-2 border-[#EFF0F6] pb-6 text-center font-medium font-dm"
         >
           Formation Essentiel
         </h3>
@@ -460,10 +460,12 @@ const Training = () => {
             </svg>
 
             <div>
-              <h3 className="text-lg font-semibold ">{steps[step].title}</h3>
-              <p className="max-w-lg text-tsec my-4">{steps[step].desc}</p>
+              <h3 className="sm:text-lg font-semibold ">{steps[step].title}</h3>
+              <p className="text-sm sm:text-base max-w-lg text-tsec my-4">
+                {steps[step].desc}
+              </p>
 
-              <div className="flex flex-col gap-8 mt-6">
+              <div className="flex text-sm sm:text-base flex-col gap-8 mt-6">
                 {steps[step].lines.map((each) => (
                   <DescriptionLine {...each} />
                 ))}

@@ -7,7 +7,7 @@ const ReviewsContainer = ({
 }: {
   reviews: { name: string; label: string; desc: string }[]
 }) => {
-  const scrollContainer = useRef(null)
+  const scrollContainer = useRef<HTMLDivElement>(null)
   return (
     <div className="relative max-w-full">
       <button

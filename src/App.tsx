@@ -26,7 +26,7 @@ function App() {
           }`}
         >
           <div className="relative ">
-            <h3 className="cool bg-dark overflow-hidden relative z-10 py-1 flex gap-3 uppercase font-inter text-5xl text-slate-400">
+            <h3 className="cool bg-dark overflow-hidden relative z-10 py-1 flex  items-center justify-center gap-3 uppercase font-inter text-3xl sm:text-5xl text-slate-400">
               {words.map((word, index) => (
                 <span
                   className="relative"

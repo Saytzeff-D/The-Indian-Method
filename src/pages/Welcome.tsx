@@ -19,7 +19,7 @@ const Welcome = () => {
         className="appx w-full text-center md:text-left grid md:grid-cols-2 min-h-[70vh] gap-4"
       >
         <div className="flex flex-col gap-6 my-auto" data-aos="fade-right">
-          <h3 className="text-3xl md:text-5xl font-semibold text-dark">
+          <h3 className="text-3xl mt-10 md:mt-0 md:text-5xl font-semibold text-dark">
             The Indian Method
           </h3>
           <p className="text-tsec max-w-lg">
