@@ -130,7 +130,7 @@ const FoundersAndHistory = () => {
 
       <div className="appx flex flex-col items-center pt-20 pb-5">
         <h3
-          data-aos="fade-in"
+          // data-aos="fade-in"
           className="text-3xl bg-white h-7 flex items-center font-semibold text-center mb-20  relative"
         >
           Nos valeurs

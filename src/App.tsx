@@ -1,39 +1,55 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import "./App.css"
-import Programme from "./pages/Programme"
-import BecomeSponsor from "./pages/BecomeSponsor"
-import FAQs from "./pages/FAQs"
-import OurApplication from "./pages/OurApplication"
-import Training from "./pages/Training"
-import IndianMethod from "./pages/IndianMethod"
-import FoundersAndHistory from "./pages/FoundersAndHistory"
-import Welcome from "./pages/Welcome"
 import "aos/dist/aos.css"
-import { useEffect } from "react"
-import AOS from "aos"
+import { useEffect, useState } from "react"
+import AppRouter from "./Router"
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 1000 })
-    AOS.refresh()
+    setTimeout(() => {
+      setShow(true)
+    }, 2500)
   }, [])
+
+  const generateAnimationDelay = (index: number) => {
+    return { animationDelay: `${index * 0.1}s` } // Adjust delay as needed
+  }
+  const words = "THE INDIAN METHOD".split(" ")
+  const [show, setShow] = useState(false)
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<Navigate to={"/welcome"} />} path="" />
-          <Route Component={Welcome} path="welcome" />
-          <Route Component={Training} path="our-training" />
-          <Route Component={FoundersAndHistory} path="notice" />
-          <Route Component={IndianMethod} path="indian-method" />
-          <Route Component={BecomeSponsor} path="become-sponsor" />
-          <Route Component={FAQs} path="faqs" />
-          <Route Component={Programme} path="contact" />
-          <Route Component={OurApplication} path="our-application" />
-          <Route element={<Navigate to={"/welcome"} />} path="*" />
-        </Routes>
-      </BrowserRouter>
+      <div className={` ${!show ? "" : ""}`}>
+        <div
+          className={`flex bg-dark items-center justify-center overflow-hidden ${
+            !show ? "h-screen" : "h-0"
+          }`}
+        >
+          <div className="relative ">
+            <h3 className="cool bg-dark relative z-10 whitespace-nowrap overflow-hidden py-1 flex gap-3 uppercase font-inter text-5xl text-slate-700">
+              {words.map((word, index) => (
+                <span
+                  className="relative"
+                  key={index}
+                  data-text={word}
+                  style={generateAnimationDelay(index)}
+                >
+                  {word}
+                </span>
+              ))}
+            </h3>
+            <span className="stroke skew-x-[25deg] left-1/2 top-1/2 -rotate-[60deg] -translate-x-1/2 -translate-y-1/2 absolute h-1.5 bg-white"></span>
+          </div>
+        </div>
+        <>
+          {show && (
+            <div className="fade">
+              <AppRouter />
+            </div>
+          )}
+        </>
+      </div>
+      {/* <div className={`${!show ? "hidden" : "block"}`}> */}
+      {/* </div> */}
     </>
   )
 }

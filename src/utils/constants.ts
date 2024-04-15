@@ -1,11 +1,12 @@
 export const navLinks = [
-	{ label: "Accueil", path: "/welcome", },
-	{ label: "Indian Method", path: "/indian-method", },
-	{ label: "Notre Application ", path: "/our-application", },
-	{ label: "Avis", path: "/notice", },
-	{ label: "FAQ", path: "/faqs", },
-	{ label: "Contact", path: "/contact", },
-	{ label: "Nos formations", path: "/our-training", },
+	{ label: "Accueil", to: "/welcome", },
+	{ label: "Indian Method", to: "/indian-method", },
+	{ label: "Notre Application ", to: "/our-application", },
+	{ label: "Avis", to: "reviews", scrollOn: "/welcome", },
+	{ label: "Parrainage", to: "/parrainage", },
+	{ label: "FAQ", to: "/faqs", },
+	{ label: "Contact", to: "/contact", },
+	{ label: "Nos formations", to: "pricing", scrollOn: "/welcome", },
 ]
 
 

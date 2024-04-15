@@ -5,6 +5,7 @@ import man2 from "../assets/man2.png"
 import clock from "../assets/clock.png"
 import MemoIndianMethodPath from "../components/svgs/IndianMethodPath"
 import Review from "../components/Review"
+import ScrollLink from "../components/ScrollLink"
 
 const IndianMethod = () => {
   return (
@@ -21,31 +22,33 @@ const IndianMethod = () => {
             concrétiser vos visions créatives sans vous ruiner.
           </p>
           <div className="flex items-center justify-center md:justify-start flex-wrap gap-3 md:gap-6 ">
-            <button className="px-10 flex items-center gap-3 bg-primary rounded-full text-white py-2.5 font-medium">
-              Commencer
-              <svg
-                width="15"
-                height="16"
-                viewBox="0 0 15 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.9043 1.65436L14.2499 8.00001L7.9043 14.3457"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M14.2499 8L0.75 8"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            <ScrollLink to="pricing" scrollOn={"/welcome"}>
+              <button className="px-10 flex items-center gap-3 bg-primary rounded-full text-white py-2.5 font-medium">
+                Commencer
+                <svg
+                  width="15"
+                  height="16"
+                  viewBox="0 0 15 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.9043 1.65436L14.2499 8.00001L7.9043 14.3457"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M14.2499 8L0.75 8"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </ScrollLink>
             <button className="px-10 border-primary border text-primary rounded-full py-2.5 font-medium">
               Vidéo explicative
             </button>
@@ -125,6 +128,7 @@ const IndianMethod = () => {
         <div className="bg-[#F7FFFD]">
           <div className="appx flex flex-col text-center gap-4 items-center relative z-20 pt-20">
             <span
+              id="pricing"
               data-aos="zoom-in"
               className="px-5 flex items-center gap-3 bg-primary rounded-full text-white py-1.5 font-medium"
             >
@@ -329,7 +333,7 @@ const IndianMethod = () => {
         </div>
       </div>
 
-      <div className="appx text-center mb-20">
+      <div className="appx text-center mb-20" id="reviews">
         <h3 data-aos="fade-up" className="text-4xl text-dark font-semibold">
           Qu’est ce que on pense nos élèves{" "}
         </h3>

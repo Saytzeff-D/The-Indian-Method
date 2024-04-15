@@ -12,6 +12,7 @@ import logo4 from "../assets/logos/logo4.png"
 import MemoMailRound from "../components/svgs/MailRound"
 import MemoSpeed from "../components/svgs/Speed"
 import MemoBars from "../components/svgs/Bars"
+import { Link } from "react-router-dom"
 
 const OurApplication = () => {
   return (
@@ -30,9 +31,18 @@ const OurApplication = () => {
             formations, vous allez pouvoir avoir acces également à notre suite
             d’applications.
           </p>
-          <button data-aos="fade-in" className="brand-btn">
-            Nous rejoindre
-          </button>
+          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 md:gap-6 ">
+            <Link
+              to={"https://www.youtube.com/@manusinauro"}
+              target="_blank"
+              className="px-4 border-primary border rounded-md py-2.5 font-medium"
+            >
+              Vidéo de présentation
+            </Link>
+            <button data-aos="fade-in" className="brand-btn">
+              Nous rejoindre
+            </button>
+          </div>
 
           <div data-aos="fade-up" className="mt-6 mb-2 relative max-w-[40rem]">
             <img

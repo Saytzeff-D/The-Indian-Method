@@ -3,6 +3,7 @@ import logo from "../assets/logo.png"
 import { useLocation } from "react-router"
 import { navLinks } from "../utils/constants"
 import { Link } from "react-router-dom"
+import ScrollLink from "./ScrollLink"
 
 const Navbar = () => {
   const [navIsOpen, setNavIsOpen] = useState(false)
@@ -41,17 +42,18 @@ const Navbar = () => {
           } px-5 lg:text-center lg:items-center gap-2 lg:gap-6 justify-center py-5`}
         >
           {navLinks.map((each) => (
-            <Link
-              to={each.path}
+            <ScrollLink
+              to={each.to}
+              scrollOn={each.scrollOn}
               className={`${
-                pathname == each.path
+                pathname == each.to
                   ? "bg-dark text-white font-semibold text-sm"
                   : ""
               } font-dm py-2.5 transition rounded-full px-5`}
               key={each.label}
             >
-              {each.label}
-            </Link>
+              <button className="outline-none"> {each.label}</button>
+            </ScrollLink>
           ))}
         </div>
       </div>

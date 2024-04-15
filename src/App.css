@@ -1,0 +1,83 @@
+:root {
+  --base: #ffffff;
+  --accent: #10191a;
+}
+
+.stroke {
+  animation: stroke 1s ease-in-out forwards 0.8s;
+}
+
+@keyframes stroke {
+  from {
+    width: 0;
+  }
+  to {
+    width: 7rem;
+  }
+}
+
+.cool {
+  animation: cool-width 2s ease-in-out forwards;
+}
+
+@media (prefers-reduced-motion) {
+  .cool span {
+    color: var(--base);
+  }
+}
+
+.cool span::before {
+  animation: max-height 2s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+  @apply text-slate-700;
+  /* color: var(--accent); */
+}
+
+.cool span::after {
+  animation: max-width 1.5s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+  color: var(--base);
+  /* color: #170f49; */
+}
+
+.cool span::before,
+.cool span::after {
+  content: attr(data-text);
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  speak: none;
+}
+
+@media (prefers-reduced-motion) {
+  .cool span::before,
+  .cool span::after {
+    animation: none;
+    content: "";
+  }
+}
+
+@keyframes cool-width {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 60rem;
+  }
+}
+
+@keyframes max-width {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes max-height {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100%;
+  }
+}

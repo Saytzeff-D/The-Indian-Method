@@ -14,6 +14,8 @@ import modeleweb from "../assets/modele-web.png"
 import mobile from "../assets/mobile.png"
 import vidimage from "../assets/video.png"
 import Review from "../components/Review"
+import ScrollLink from "../components/ScrollLink"
+import { Link } from "react-router-dom"
 
 const structure = [
   {
@@ -108,9 +110,13 @@ const Welcome = () => {
               <button className="px-10 flex items-center gap-3 bg-primary rounded-full text-white py-2.5 font-medium">
                 Qui sommes-nous ?
               </button>
-              <button className="px-10 border-primary border rounded-full py-2.5 font-medium">
+              <Link
+                to={"https://www.youtube.com/@manusinauro"}
+                target="_blank"
+                className="px-10 border-primary border rounded-full py-2.5 font-medium"
+              >
                 Vidéo explicative
-              </button>
+              </Link>
             </div>
           </div>
           <div
@@ -225,9 +231,11 @@ const Welcome = () => {
           ))}
         </div>
 
-        <button className="brand-btn" data-aos="fade-in">
-          En savoir plus !
-        </button>
+        <ScrollLink to="pricing" scrollOn={"/welcome"}>
+          <button className="brand-btn" data-aos="fade-in">
+            En savoir plus !
+          </button>
+        </ScrollLink>
 
         <h3
           data-aos="fade-up"
