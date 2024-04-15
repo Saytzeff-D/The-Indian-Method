@@ -2,7 +2,6 @@ import { useState } from "react"
 import logo from "../assets/logo.png"
 import { useLocation } from "react-router"
 import { navLinks } from "../utils/constants"
-import { Link } from "react-router-dom"
 import ScrollLink from "./ScrollLink"
 
 const Navbar = () => {
