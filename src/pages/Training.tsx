@@ -15,6 +15,25 @@ import { useParams } from "react-router"
 import { plans } from "../utils/constants"
 import ScrollLink from "../components/ScrollLink"
 import { useState } from "react"
+import MemoCPU from "../components/svgs/CPU"
+import MemoDesktop from "../components/svgs/Desktop"
+import MemoInfoCircle from "../components/svgs/InfoCircle"
+import MemoBookOpened from "../components/svgs/BookOpened"
+import MemoDashboard from "../components/svgs/Dashboard"
+import MemoUserbox from "../components/svgs/Userbox"
+import MemoFiledoc from "../components/svgs/Filedoc"
+import MemoEyelight from "../components/svgs/Eyelight"
+import MemoUsercircle from "../components/svgs/Usercircle"
+import MemoGroupSHare from "../components/svgs/GroupSHare"
+import MemoLinefill from "../components/svgs/Linefill"
+import MemoLinkalt from "../components/svgs/Linkalt"
+import MemoTableIcon from "../components/svgs/TableIcon"
+import MemoRefresh2 from "../components/svgs/Refresh2"
+import MemoCreditCardFill from "../components/svgs/CreditCardFill"
+import MemoStopAndPlayFill from "../components/svgs/StopAndPlayFill"
+import MemoTrophy from "../components/svgs/Trophy"
+import MemoChartAltFill from "../components/svgs/ChartAltFill"
+import MemoColumnUpFill from "../components/svgs/ColumnUpFill"
 
 const Training = () => {
   const features = [
@@ -57,8 +76,170 @@ const Training = () => {
     { icon: <MemoPhoneCall />, label: "Appel  " },
   ]
 
+  const steps: {
+    [key: number]: {
+      desc: string
+      title: string
+      sub: string
+      lines: { icon: JSX.Element; desc: string }[]
+    }
+  } = {
+    1: {
+      title: "Vocal introduction à la formation (40min)",
+      desc: `À vos côtés à chaque étape avec un accompagnement qui fait toute la différence, nous vous offrons un itinéraire sur-mesure vers le succès : personnalisé, précis, et performant.`,
+      sub: `Compétences : être à l’aise avec l’application  ; Connaitres les différents salons du discord ; Commencer à utiliser les outils`,
+      lines: [
+        {
+          icon: <MemoCamera />,
+          desc: "Découverte de l’application ( 25min ) ",
+        },
+        {
+          icon: <MemoCPU />,
+          desc: "Présentation du discord et des différents salon( 10min ) ",
+        },
+        {
+          icon: <MemoDesktop />,
+          desc: "Installation des outils  (Scrapper, ia ....)",
+        },
+      ],
+    },
+    2: {
+      title: "Vocal Trouver un client (1h)",
+      desc: `À vos côtés à chaque étape avec un accompagnement qui fait toute la différence, nous vous offrons un itinéraire sur-mesure vers le succès : personnalisé, précis, et performant.`,
+      sub: `Compétences : Repérer le client idéal ; Enquêter sur son client ; Reconnaitre les besoins exactes de son client...`,
+      lines: [
+        {
+          icon: <MemoCamera />,
+          desc: " Approfondir la démarche téléphonique ( 30min ) ",
+        },
+        {
+          icon: <MemoCamera />,
+          desc: "S’organiser Facilement sur Excel ( 12min ) ",
+        },
+        {
+          icon: <MemoDesktop />,
+          desc: "Utiliser un Scrapper Google Maps ( 30p ) ",
+        },
+      ],
+    },
+    3: {
+      title: "Vocal démarcher un client (35min)",
+      desc: `À vos côtés à chaque étape avec un accompagnement qui fait toute la différence, nous vous offrons un itinéraire sur-mesure vers le succès : personnalisé, précis, et performant.`,
+      sub: `Compétences : Démarcher un client ; Savoir utiliser Figma  ; Visionner les différentes vidéos sur ce thème`,
+      lines: [
+        {
+          icon: <MemoInfoCircle />,
+          desc: " Introduction sur le thème ( 10min ) ",
+        },
+        {
+          icon: <MemoBookOpened />,
+          desc: "Découverte de Figma ( 20min ) ",
+        },
+        {
+          icon: <MemoDashboard />,
+          desc: "Présentation des modules ( 5min ) ",
+        },
+      ],
+    },
+    4: {
+      title: "Vocal convaincre un client (1h) ",
+      desc: `À vos côtés à chaque étape avec un accompagnement qui fait toute la différence, nous vous offrons un itinéraire sur-mesure vers le succès : personnalisé, précis, et performant.`,
+      sub: `Compétences : Capacité à poser les bonnes questions ; Capacité à négocier avec le client ; Avoir la confiance de son client`,
+      lines: [
+        {
+          icon: <MemoUserbox />,
+          desc: "Comprendre les besoins du client ( 30min )",
+        },
+        {
+          icon: <MemoFiledoc />,
+          desc: "Présentez les avantages de votre service ( 15min ) ",
+        },
+        {
+          icon: <MemoEyelight />,
+          desc: "Renforcer la confiance du client  ( 15min )",
+        },
+      ],
+    },
+    5: {
+      title: "Vocal conclure une vente (1h)",
+      desc: `À vos côtés à chaque étape avec un accompagnement qui fait toute la différence, nous vous offrons un itinéraire sur-mesure vers le succès : personnalisé, précis, et performant.`,
+      sub: `Compétences : Capacité à poser les bonnes questions ; Capacité à négocier avec le client ; Avoir la confiance de son client`,
+      lines: [
+        {
+          icon: <MemoGroupSHare />,
+          desc: "Utilisation de plusieurs techniques de closing  ( 30min ) ",
+        },
+        {
+          icon: <MemoLinefill />,
+          desc: "Assurer le suivi après l’achat ( 15min ) ",
+        },
+        {
+          icon: <MemoUsercircle />,
+          desc: "Obtenir l'engagement du client ( 15min)",
+        },
+      ],
+    },
+    6: {
+      title: "Vocal Contacter un Partenaire Indien (30min)",
+      desc: `À vos côtés à chaque étape avec un accompagnement qui fait toute la différence, nous vous offrons un itinéraire sur-mesure vers le succès : personnalisé, précis, et performant.`,
+      sub: `Compétences : Technique pour parler à L’Indien ; Savoir présenter la maquette correctement ; Donner les bonnes instructions `,
+      lines: [
+        {
+          icon: <MemoLinkalt />,
+          desc: " Comment parler avec l’Indien ? ( 10min ) ",
+        },
+        {
+          icon: <MemoTableIcon />,
+          desc: "Présenter la maquette à L’Indien ( 10min )",
+        },
+        {
+          icon: <MemoBookCheck />,
+          desc: "Donner les instructions à l’Indien ( 10min ) ",
+        },
+      ],
+    },
+    7: {
+      title: "Vocal finaliser avec un Partenaire Indien (30 min)",
+      desc: `À vos côtés à chaque étape avec un accompagnement qui fait toute la différence, nous vous offrons un itinéraire sur-mesure vers le succès : personnalisé, précis, et performant.`,
+      sub: `Compétences : Avoir l’oeil pour les petits détails ; Négocier avec L’indien ; Savoir closer`,
+      lines: [
+        {
+          icon: <MemoRefresh2 />,
+          desc: "Faire attention aux petits détails ( 8min ) ",
+        },
+        {
+          icon: <MemoCreditCardFill />,
+          desc: "Négocier avec l’Indien ( 12min ) ",
+        },
+        {
+          icon: <MemoStopAndPlayFill />,
+          desc: "Visionner les vidéos sur le closing ( 10min ) ",
+        },
+      ],
+    },
+    8: {
+      title: "Gestion des Fiscalités (60 min en appel vocal)",
+      desc: `À vos côtés à chaque étape avec un accompagnement qui fait toute la différence, nous vous offrons un itinéraire sur-mesure vers le succès : personnalisé, précis, et performant.`,
+      sub: `Compétences : Organiser son travail ; Choisir un régime fiscal ; Optimiser son régime fiscal`,
+      lines: [
+        {
+          icon: <MemoTrophy />,
+          desc: "S’organiser dans son travail ( 20min ) ",
+        },
+        {
+          icon: <MemoColumnUpFill />,
+          desc: "Choisir un régime fiscal ( 20min ) ",
+        },
+        {
+          icon: <MemoChartAltFill />,
+          desc: "Stratégie d’optimisation fiscal  ( 20min) ",
+        },
+      ],
+    },
+  }
+
   const { plan } = useParams()
-  const [step, setstep] = useState(1)
+  const [step, setstep] = useState<number>(1)
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -279,34 +460,18 @@ const Training = () => {
             </svg>
 
             <div>
-              <h3 className="text-lg font-semibold ">
-                Vocal Trouver un client (1h)
-              </h3>
-              <p className="max-w-lg text-tsec my-4">
-                À vos côtés à chaque étape avec un accompagnement qui fait toute
-                la différence, nous vous offrons un itinéraire sur-mesure vers
-                le succès : personnalisé, précis, et performant.
-              </p>
+              <h3 className="text-lg font-semibold ">{steps[step].title}</h3>
+              <p className="max-w-lg text-tsec my-4">{steps[step].desc}</p>
 
               <div className="flex flex-col gap-8 mt-6">
-                <div className="flex items-center gap-3">
-                  <MemoCamera />
-                  <span> Approfondir la démarche téléphonique ( 30min ) </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MemoCamera />
-                  <span> S’organiser Facilement sur Excel ( 12min ) </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MemoBookCheck />
-                  <span>Utiliser un Scrapper Google Maps ( 30p ) </span>
-                </div>
+                {steps[step].lines.map((each) => (
+                  <DescriptionLine {...each} />
+                ))}
               </div>
             </div>
           </div>
           <p className="text-sm italic text-tsec pt-4 md:p-16">
-            Compétences : Repérer le client idéal ; Enquêter sur son client ;
-            Reconnaitre les besoins exactes de son client...
+            {steps[step].sub}
           </p>
         </div>
       </div>
@@ -316,6 +481,21 @@ const Training = () => {
 }
 
 export default Training
+
+const DescriptionLine = ({
+  icon,
+  desc,
+}: {
+  icon: JSX.Element
+  desc: string
+}) => {
+  return (
+    <div className="flex items-center gap-3">
+      {icon}
+      <span> {desc} </span>
+    </div>
+  )
+}
 
 const TabCircle = ({
   step,
