@@ -218,12 +218,12 @@ const Welcome = () => {
           indiens ?
         </h3>
 
-        <div className="appx w-full mb-20 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 xl:gap-14">
+        <div className="lg:appx w-full mb-20 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 xl:gap-14">
           {advantages.map((each, i) => (
             <div
               data-aos="zoom-in"
               key={each.label + i}
-              className="flex h-full justify-center text-center flex-col rounded-lg items-center py-10 gap-4 bg-[#D9D9D954]"
+              className="flex h-full justify-center text-center flex-col rounded-lg items-center py-10 gap-2 bg-[#D9D9D954]"
             >
               {each.img}
               <p>{each.label}</p>

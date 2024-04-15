@@ -13,7 +13,7 @@ const Footer = () => {
         </p>
         <div className="flex items-center gap-4 justify-center w-fit">
           <Link
-            to="https://www.tiktok.com/@manusinauro"
+            to="https://www.instagram.com/manusinauro"
             target="_blank"
             className="text-white hover:text-slate-300 transition"
           >
@@ -26,11 +26,15 @@ const Footer = () => {
           >
             <MemoDiscord />
           </Link>
-          <button className="text-white hover:text-slate-300 transition">
-            <MemoYoutube />
-          </button>
           <Link
-            to="https://www.instagram.com/manusinauro/"
+            to="https://www.youtube.com/@manusinauro"
+            target="_blank"
+            className="text-white hover:text-slate-300 transition"
+          >
+            <MemoYoutube />
+          </Link>
+          <Link
+            to="https://www.tiktok.com/@manusinauro"
             target="_blank"
             className="text-white hover:text-slate-300 transition"
           >
