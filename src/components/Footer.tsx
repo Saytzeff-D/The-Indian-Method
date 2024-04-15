@@ -3,6 +3,7 @@ import MemoDiscord from "./svgs/Discord"
 import MemoInstagram from "./svgs/Instagram"
 import MemoTiktok from "./svgs/Tiktok"
 import MemoYoutube from "./svgs/Youtube"
+import { links } from "../utils/constants"
 
 const Footer = () => {
   return (
@@ -13,28 +14,28 @@ const Footer = () => {
         </p>
         <div className="flex items-center gap-4 justify-center w-fit">
           <Link
-            to="https://www.instagram.com/manusinauro"
+            to={links.instagram}
             target="_blank"
             className="text-white hover:text-slate-300 transition"
           >
             <MemoInstagram />
           </Link>
           <Link
-            to="https://discord.gg/rRUmkpdkC3"
+            to={links.discord}
             target="_blank"
             className="text-white hover:text-slate-300 transition"
           >
             <MemoDiscord />
           </Link>
           <Link
-            to="https://www.youtube.com/@manusinauro"
+            to={links.youtube}
             target="_blank"
             className="text-white hover:text-slate-300 transition"
           >
             <MemoYoutube />
           </Link>
           <Link
-            to="https://www.tiktok.com/@manusinauro"
+            to={links.tiktok}
             target="_blank"
             className="text-white hover:text-slate-300 transition"
           >

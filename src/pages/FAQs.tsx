@@ -7,7 +7,10 @@ const FAQs = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="flex flex-col gap-4 items-center font-dm appx text-center justify-center w-full min-h-[70vh]">
+      <div
+        id="faqs-top"
+        className="flex flex-col gap-4 items-center font-dm appx text-center justify-center w-full min-h-[70vh]"
+      >
         <h3
           data-aos="fade-down"
           className="uppercase text-primary text-sm tracking-[0.15em]"

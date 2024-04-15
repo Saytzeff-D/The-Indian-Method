@@ -11,6 +11,10 @@ import MemoCamera from "../components/svgs/Camera"
 import MemoBookCheck from "../components/svgs/BookCheck"
 import MemoSettings from "../components/svgs/Settings"
 import MemoPhoneCall from "../components/svgs/PhoneCall"
+import { useParams } from "react-router"
+import { plans } from "../utils/constants"
+import ScrollLink from "../components/ScrollLink"
+import { useState } from "react"
 
 const Training = () => {
   const features = [
@@ -52,10 +56,14 @@ const Training = () => {
     { icon: <MemoSettings />, label: "Logiciels" },
     { icon: <MemoPhoneCall />, label: "Appel  " },
   ]
+
+  const { plan } = useParams()
+  const [step, setstep] = useState(1)
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="my-10">
+      <div id="training" className="my-10">
         <h3
           data-aos="fade-in"
           className="text-4xl border-b-2 border-[#EFF0F6] pb-6 text-center font-medium font-dm"
@@ -144,7 +152,7 @@ const Training = () => {
                 <div className="p-5 h-[15rem]">
                   <h3 className="flex justify-between items-center gap-3 font-semibold text-lg text-dark2">
                     <span>Formation Essentiel</span>
-                    <span>190€</span>
+                    <span>{plans[plan as unknown as number]?.amount}</span>
                   </h3>
                 </div>
               </div>
@@ -193,9 +201,14 @@ const Training = () => {
             formations, vous allez pouvoir avoir acces également à notre suite
             d’applications.
           </p>
-          <button data-aos="fade-in" className="brand-btn">
-            En savoir plus
-          </button>
+          <ScrollLink
+            scrollOn={"/our-application"}
+            to="our-application"
+            data-aos="fade-in"
+            className="brand-btn"
+          >
+            <button> En savoir plus</button>
+          </ScrollLink>
 
           <div data-aos="fade-up" className="mt-6 mb-2 relative max-w-[40rem]">
             <img
@@ -221,7 +234,7 @@ const Training = () => {
         </h3>
         <div
           data-aos="fade-in"
-          className="flex items-center flex-wrap my-3 gap-2 md:gap-5 justify-center"
+          className="flex items-center flex-wrap my-3 gap-2 md:gap-5 lg:gap-10 justify-center"
         >
           {lists.map((each) => (
             <span className="flex items-center gap-3">
@@ -230,24 +243,22 @@ const Training = () => {
           ))}
         </div>
 
-        <div data-aos="fade-up" className="grid grid-cols-8 w-full mt-20 mb-5">
-          <div className="bg-[#DCE3E9] h-1 relative">
-            <div className="bg-primary h-full w-1/2">
-              <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-sm rounded-full flex items-center justify-center h-7 text-white w-7 min-w-7">
-                1
-              </span>
-            </div>
-          </div>
-          {[2, 3, 4, 5, 6, 7, 8].map((each) => (
-            <div className="bg-[#DCE3E9] h-1 relative">
-              <div className=" h-full w-1/2">
-                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#DCE3E9] text-sm rounded-full flex items-center justify-center h-7 text-tsec w-7 min-w-7">
-                  {each}
-                </span>
-              </div>
-            </div>
+        <header
+          // data-aos="fade-up"
+          className="py-7 w-full flex items-center justify-between"
+        >
+          <TabLine value={0} step={step} />
+          {new Array(8).fill(null).map((_each, i) => (
+            <>
+              <TabCircle
+                onClick={() => setstep(i + 1)}
+                value={i + 1}
+                step={step}
+              />
+              <TabLine value={i + 1} step={step} />
+            </>
           ))}
-        </div>
+        </header>
 
         <div
           data-aos="fade-up"
@@ -305,6 +316,46 @@ const Training = () => {
 }
 
 export default Training
+
+const TabCircle = ({
+  step,
+  value,
+  onClick,
+}: {
+  step: number
+  value: number
+  onClick: () => void
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`${
+        step >= value
+          ? "bg-primary text-white after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:h-7 after:w-7 after:min-w-7 after:bg-primary/40 after:rounded-full"
+          : "bg-[#DCE3E9] text-[#6F6C90]"
+      } h-5 relative w-5 min-w-5 font-medium transition-all duration-300 rounded-full flex items-center justify-center text-xs `}
+    >
+      {value}
+    </button>
+  )
+}
+
+const TabLine = ({ step, value }: { step: number; value: number }) => {
+  return (
+    <div className="w-full h-1 overflow-hidden bg-[#DCE3E9]">
+      <div
+        // style={{ transitionDelay: `${value * 0.2}s` }}
+        className={`${
+          step > value
+            ? "w-full bg-primary"
+            : step == value
+            ? "w-1/2 bg-primary"
+            : ""
+        } h-full transition-all ease-in-out duration-300`}
+      ></div>
+    </div>
+  )
+}
 
 const Check = () => {
   return (

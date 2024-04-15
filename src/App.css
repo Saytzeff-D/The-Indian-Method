@@ -4,7 +4,7 @@
 }
 
 .stroke {
-  animation: stroke 1s ease-in-out forwards 0.8s;
+  animation: stroke 1.2s ease-in-out forwards 0.8s;
 }
 
 @keyframes stroke {
@@ -17,7 +17,7 @@
 }
 
 .cool {
-  animation: cool-width 2s ease-in-out forwards;
+  animation: cool-width 2.5s ease-in-out forwards;
 }
 
 @media (prefers-reduced-motion) {

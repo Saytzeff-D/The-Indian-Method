@@ -13,7 +13,7 @@ import rep2 from "../assets/material2.png"
 import rep3 from "../assets/material3.png"
 import rep4 from "../assets/material4.png"
 
-const Programme = () => {
+const Sponsorship = () => {
   const advantages = [
     {
       label: "Matériel de Promotion Exclusif",
@@ -32,7 +32,7 @@ const Programme = () => {
   return (
     <div className="">
       <Navbar />
-      <div>
+      <div id="sponsorship">
         <div className="appx flex flex-col items-center text-center gap-8 py-10">
           <h3
             data-aos="fade-down"
@@ -236,4 +236,4 @@ const Programme = () => {
   )
 }
 
-export default Programme
+export default Sponsorship

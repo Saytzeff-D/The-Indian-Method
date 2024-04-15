@@ -38,14 +38,14 @@ const Navbar = () => {
         <div
           className={`flex flex-col lg:flex-row ${
             navIsOpen ? "" : ""
-          } px-5 lg:text-center lg:items-center gap-2 lg:gap-6 justify-center py-5`}
+          } px-5 lg:text-center lg:items-center gap-2 md:gap-3 xl:gap-6 justify-center py-5`}
         >
           {navLinks.map((each) => (
             <ScrollLink
               to={each.to}
               scrollOn={each.scrollOn}
               className={`${
-                pathname == each.to
+                pathname == (each.scrollOn ?? each.to) && each.whole
                   ? "bg-dark text-white font-semibold text-sm"
                   : ""
               } font-dm py-2.5 transition rounded-full px-5`}

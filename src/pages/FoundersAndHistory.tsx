@@ -9,13 +9,17 @@ import Reussite from "../assets/Reussite.png"
 import evolution from "../assets/evolution.png"
 import Qualite from "../assets/Qualite.png"
 import Communaute from "../assets/Communaute.png"
+import ScrollLink from "../components/ScrollLink"
 
 const FoundersAndHistory = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
 
-      <div className="appx grid md:grid-cols-2 min-h-[70vh] gap-4 lg:gap-10">
+      <div
+        id="founders-top"
+        className="appx grid md:grid-cols-2 min-h-[70vh] gap-4 lg:gap-10"
+      >
         <div data-aos="fade-right" className="flex flex-col gap-6 my-auto">
           <h3 className="md:text-5xl mt-10 md:mt-0 text-3xl font-semibold text-dark">
             The Indian Method
@@ -176,9 +180,11 @@ const FoundersAndHistory = () => {
           ))}
         </div>
 
-        <button className="brand-btn" data-aos="fade-in">
-          Nous rejoindre{" "}
-        </button>
+        <ScrollLink to="pricing" scrollOn={"/welcome"}>
+          <button className="brand-btn" data-aos="fade-in">
+            Nous rejoindre{" "}
+          </button>
+        </ScrollLink>
       </div>
 
       <Footer />

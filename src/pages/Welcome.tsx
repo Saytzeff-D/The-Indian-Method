@@ -1,323 +1,371 @@
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import man1 from "../assets/man1.png"
-import MemoTerminal from "../components/svgs/Terminal"
-import MemoPhoneGreen from "../components/svgs/PhoneGreen"
-import MemoWalletGreen from "../components/svgs/WalletGreen"
-import internet from "../assets/internet.png"
-import ai from "../assets/ai.png"
-import shopify from "../assets/shopify.png"
-import conception from "../assets/conception.png"
-import ingenieur from "../assets/ingenieur.png"
-import devweb from "../assets/dev-web.png"
-import modeleweb from "../assets/modele-web.png"
-import mobile from "../assets/mobile.png"
-import vidimage from "../assets/video.png"
-import Review from "../components/Review"
+import man2 from "../assets/man2.png"
+import clock from "../assets/clock.png"
+import MemoIndianMethodPath from "../components/svgs/IndianMethodPath"
 import ScrollLink from "../components/ScrollLink"
 import { Link } from "react-router-dom"
-
-const structure = [
-  {
-    title: "Trouver un développeur indien",
-    sub: "Première étape",
-    icon: <MemoTerminal />,
-    desc: `Trouvez des développeurs compétents proposant des services digitaux, y compris des applications iOS.`,
-  },
-  {
-    title: "Statut Parrain Reconnu",
-    sub: "Trouver un client",
-    icon: <MemoPhoneGreen />,
-    desc: "Identifiez et signer aisément des clients en France grâce à notre méthode de prospection.",
-  },
-  {
-    title: "Vendez le site",
-    sub: "Troisième étape",
-    icon: <MemoWalletGreen />,
-    desc: "Assurez-vous de conserver votre commission pour votre travail de gestion efficace.",
-  },
-]
-
-const advantages = [
-  {
-    label: "Créer des sites internet",
-    img: <img src={internet} alt="" className="w-14" />,
-  },
-  {
-    label: "Créer des bot IA",
-    img: <img src={ai} alt="" className="w-14" />,
-  },
-  {
-    label: "Développer des logiciels",
-    img: <img src={ingenieur} alt="" className="w-14" />,
-  },
-  {
-    label: "Référencer des sites ",
-    img: <img src={modeleweb} alt="" className="w-14" />,
-  },
-  {
-    label: "Développer des boutiques Shopify / worldpress....",
-    img: <img src={shopify} alt="" className="w-14" />,
-  },
-  {
-    label: "Créer des logo, flyer .... ",
-    img: <img src={conception} alt="" className="w-14" />,
-  },
-  {
-    label: "Monter des vidéos / short....",
-    img: <img src={devweb} alt="" className="w-14" />,
-  },
-  {
-    label: "Développer des applications",
-    img: <img src={mobile} alt="" className="w-14" />,
-  },
-]
+import { links, plans, reviews1 } from "../utils/constants"
+import ReviewsContainer from "../components/ReviewsContainer"
 
 const Welcome = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
 
-      <div className="appx flex flex-col items-center">
-        <h3
-          data-aos="fade-in"
-          data-aos-duration="1000"
-          className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark"
-        >
-          Qu'est ce que The{" "}
-          <span className="relative inline-block">
-            Indian Method
-            <span className="bg-primary w-full absolute bottom-0 left-0 h-4 -z-10 inline-block mt-auto"></span>
-          </span>{" "}
-          ?
-        </h3>
-
-        <div className="grid md:grid-cols-2 pt-10 gap-4 lg:gap-10">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className="flex text-center md:text-left flex-col gap-6 my-auto"
-          >
-            <p className="text-dark md:text-lg">
-              La "Young Indian Method" est une méthode d'entrepreneuriat qui
-              implique l'embauche de jeunes travailleurs indiens pour travailler
-              à distance, profitant des taux de change avantageux pour minimiser
-              les coûts et maximiser les profits. Cette approche est souvent
-              discutée dans le cadre de la culture entrepreneuriale moderne et
-              de l'optimisation des processus d'affaires.
-            </p>
-            <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 md:gap-6 ">
+      <div
+        id="welcome-top"
+        className="appx w-full text-center md:text-left grid md:grid-cols-2 min-h-[70vh] gap-4"
+      >
+        <div className="flex flex-col gap-6 my-auto" data-aos="fade-right">
+          <h3 className="text-3xl md:text-5xl font-semibold text-dark">
+            The Indian Method
+          </h3>
+          <p className="text-tsec max-w-lg">
+            Avec The Indian Method, accédez à un réseau d'experts indiens pour
+            concrétiser vos visions créatives sans vous ruiner.
+          </p>
+          <div className="flex items-center justify-center md:justify-start flex-wrap gap-3 md:gap-6 ">
+            <ScrollLink to="pricing" scrollOn={"/welcome"}>
               <button className="px-10 flex items-center gap-3 bg-primary rounded-full text-white py-2.5 font-medium">
-                Qui sommes-nous ?
+                Commencer
+                <svg
+                  width="15"
+                  height="16"
+                  viewBox="0 0 15 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.9043 1.65436L14.2499 8.00001L7.9043 14.3457"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M14.2499 8L0.75 8"
+                    stroke="white"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
-              <Link
-                to={"https://www.youtube.com/@manusinauro"}
-                target="_blank"
-                className="px-10 border-primary border rounded-full py-2.5 font-medium"
-              >
-                Vidéo explicative
-              </Link>
-            </div>
-          </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className="my-auto relative"
-          >
-            <img
-              src={man1}
-              className="w-full object-cover my-auto pointer-events-none"
-              alt=""
-            />
-            <button className="bg-white rounded-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center h-20 w-20 min-w-20">
-              <svg
-                width="25"
-                height="30"
-                viewBox="0 0 25 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M23.5053 13.5233C24.7754 14.3041 24.7754 16.1501 23.5053 16.9309L3.57747 29.1814C2.2449 30.0005 0.530066 29.0418 0.530066 27.4775L0.530067 2.9767C0.530067 1.41248 2.2449 0.453712 3.57746 1.27289L23.5053 13.5233Z"
-                  fill="black"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        <h3
-          data-aos="fade-up"
-          className="text-3xl md:text-5xl text-center mb-10 md:mb-24 mt-20 md:mt-40 font-semibold text-dark"
-        >
-          Comment ça marche ?
-        </h3>
-
-        <div data-aos="fade-in">
-          <div className="flex flex-col md:flex-row">
-            {structure.map((each, i) => (
-              <div key={i + each.title} className="py-5">
-                <div
-                  className={`bg-primary h-1 relative ${
-                    i == 0 ? "md:ml-10" : ""
-                  }`}
-                >
-                  <span
-                    className={`absolute w-6 h-6 top-1/2 -translate-y-1/2 flex items-center justify-center rounded-full text-white text-[.55rem] bg-primary ${
-                      i == 3
-                        ? "right-0"
-                        : i == 0
-                        ? "-left-1"
-                        : "md:left-11 left-2 -translate-x-1/2"
-                    }`}
-                  >
-                    <svg
-                      width="8"
-                      height="7"
-                      viewBox="0 0 8 7"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.99998 4.793L1.35348 3.1465L0.646484 3.8535L2.99998 6.207L7.85348 1.3535L7.14648 0.6465L2.99998 4.793Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </span>
-                </div>
-                <div
-                  className={`flex flex-col mt-5 px-10 ${i == 3 ? "pr-0" : ""}`}
-                >
-                  <h3 className="text-tsec/70 text-xs font-semibold">
-                    {each.sub}
-                  </h3>
-                  <h3
-                    className={`text-sm my-1 flex items-center gap-2 text-[#0D0B26] font-medium ${
-                      i == 3 ? "text-right" : ""
-                    }`}
-                  >
-                    {each.title}
-                    {each.icon}
-                  </h3>
-                  <p className="text-primary text-sm">{each.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <h3
-          data-aos="fade-up"
-          className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark"
-        >
-          Que peuvent faire nos{" "}
-          <span className="relative inline-block">
-            développeurs
-            <span className="bg-primary w-full absolute bottom-0 left-0 h-4 -z-10 inline-block mt-auto"></span>
-          </span>{" "}
-          indiens ?
-        </h3>
-
-        <div className="lg:appx w-full mb-20 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-10 xl:gap-14">
-          {advantages.map((each, i) => (
-            <div
-              data-aos="zoom-in"
-              key={each.label + i}
-              className="flex h-full justify-center text-center flex-col rounded-lg items-center py-10 gap-2 bg-[#D9D9D954]"
+            </ScrollLink>
+            <Link
+              to={links.youtube}
+              target="_blank"
+              className="px-10 border-primary border text-primary rounded-full py-2.5 font-medium"
             >
-              {each.img}
-              <p>{each.label}</p>
-            </div>
-          ))}
+              Vidéo explicative
+            </Link>
+          </div>
         </div>
-
-        <ScrollLink to="pricing" scrollOn={"/welcome"}>
-          <button className="brand-btn" data-aos="fade-in">
-            En savoir plus !
+        <div data-aos="fade-left" className="my-auto relative">
+          <img
+            src={man1}
+            className="w-full object-cover my-auto pointer-events-none"
+            alt=""
+          />
+          <button className="bg-white rounded-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center h-20 w-20 min-w-20">
+            <svg
+              width="25"
+              height="30"
+              viewBox="0 0 25 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23.5053 13.5233C24.7754 14.3041 24.7754 16.1501 23.5053 16.9309L3.57747 29.1814C2.2449 30.0005 0.530066 29.0418 0.530066 27.4775L0.530067 2.9767C0.530067 1.41248 2.2449 0.453712 3.57746 1.27289L23.5053 13.5233Z"
+                fill="black"
+              />
+            </svg>
           </button>
-        </ScrollLink>
-
-        <h3
-          data-aos="fade-up"
-          className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark"
-        >
-          Quelques{" "}
-          <span className="relative inline-block">
-            réalisations
-            <span className="bg-primary w-full absolute bottom-0 left-0 h-4 -z-10 inline-block mt-auto"></span>
-          </span>{" "}
-          de nos Indiens
-        </h3>
-
-        <img
-          data-aos="zoom-out-up"
-          src={vidimage}
-          className="rounded-xl w-full object-cover pointer-events-none"
-          alt=""
-        />
-
-        <h3
-          data-aos="fade-in"
-          className="font-bold text-xl md:text-3xl mt-20 max-w-lg text-center"
-        >
-          Un site réalisé par un développeur Indien pour 150$
-        </h3>
-
-        <h3
-          data-aos="fade-up"
-          className="text-3xl md:text-5xl text-center my-10 md:my-20 font-semibold text-dark"
-        >
-          Quelques retours de nos élèves
-        </h3>
-
-        <div className="grid md:grid-cols-3 gap-5">
-          {[
-            {
-              name: "Blend",
-              label: "UX Designer @Brello",
-              desc: `Formation essentiel, premier vocal d'introduction fini, c'était clair, dés la fin de l'appel on a une ligne directrice et des bases qui sont posées pour nous aider au mieux de A à Z à générer nos premiers revenus, je donnerai des nouvelles sur les prochaines étapes, l'accompagnement est sérieux!`,
-            },
-            {
-              name: "Khabib",
-              label: "Creative Director @Yo",
-              desc: `Formation essentiel incroyable on a pu trouver le développeur indien très rapidement on a fait la formation en vocale ensemble tous c bien passer je suis sensé faire 550€ de benef d’ici deux trois jour grâce à mon premier client quand on veut on peux!!`,
-            },
-            {
-              name: "Mehdi",
-              label: "UI Designer @Boo",
-              desc: `Actuellement en formation essentiel, j’étais sceptique au départ mais une fois le vocal d’introduction fini j’ai finalement les idées plus claires dû à la clarté de l’explication. L’accompagnement a l’air sérieux et rigoureux. De plus la formation m’a paru très intéressante je vais donc faire le maximum pour pouvoir développer mon business je vous tiens au courant des prochaines étapes !`,
-            },
-          ].map((each) => (
-            <Review {...each} />
-          ))}
         </div>
-
-        <div className="grid md:grid-cols-2 gap-5 w-full mb-20">
-          {[
-            {
-              name: "Titouan D.",
-              label: "UX Designer @Brello",
-              desc: (
-                <div className="w-full max-w-80 mx-auto rounded-full bg-gray-100 my-4 h-10"></div>
-              ),
-            },
-            {
-              name: "Sacha B.",
-              label: "Creative Director @Yo",
-              desc: (
-                <div className="w-full max-w-80 mx-auto rounded-full bg-gray-100 my-4 h-10"></div>
-              ),
-            },
-          ].map((each) => (
-            <Review {...each} />
-          ))}
-        </div>
-
-        <button data-aos="fade-in" className="brand-btn">
-          Nous rejoindre{" "}
-        </button>
       </div>
 
+      <div className="appx w-full text-center">
+        <div className="w-full max-w-lg mx-auto mb-20 h-2 bg-dark"></div>
+        <h3
+          data-aos="fade-up"
+          className="text-lg text-center mx-auto max-w-xl font-semibold text-dark"
+        >
+          Inscrivez-vous à The Indian Method et commencez à bâtir votre succès
+          dès aujourd'hui.
+        </h3>
+
+        <div className="grid my-10 grid-cols-2 md:grid-cols-4 gap-5">
+          <div data-aos="zoom-in-up" className="flex flex-col items-center">
+            <h3 className="text-dark text-3xl font-semibold">
+              4 <span className="text-primary">ans</span>
+            </h3>
+            <h3 className="text-lg font-semibold text-dark">D’expérience</h3>
+          </div>
+          <div data-aos="zoom-in-up" className="flex flex-col items-center">
+            <h3 className="text-dark text-3xl font-semibold">
+              86 <span className="text-primary">+</span>
+            </h3>
+            <h3 className="text-lg font-semibold text-dark">
+              Partenaires Indiens
+            </h3>
+          </div>
+          <div data-aos="zoom-in-up" className="flex flex-col items-center">
+            <h3 className="text-dark text-3xl font-semibold">
+              300 <span className="text-primary">+</span>
+            </h3>
+            <h3 className="text-lg font-semibold text-dark">Elèves</h3>
+          </div>
+          <div data-aos="zoom-in-up" className="flex flex-col items-center">
+            <h3 className="text-dark text-3xl font-semibold">
+              10 <span className="text-primary">+</span>
+            </h3>
+            <h3 className="text-lg font-semibold text-dark">Pays</h3>
+          </div>
+        </div>
+      </div>
+
+      <img
+        data-aos="zoom-out-up"
+        src={man2}
+        className="mt-5 max-h-[70vh] object-cover object-top"
+        alt=""
+      />
+
+      <div className="relative mb-20">
+        <div className="bg-[#F7FFFD]">
+          <div className="appx flex flex-col text-center gap-4 items-center relative z-20 pt-20">
+            <span
+              id="pricing"
+              data-aos="zoom-in"
+              className="px-5 flex items-center gap-3 bg-primary rounded-full text-white py-1.5 font-medium"
+            >
+              Nos Formations
+            </span>
+            <h3
+              data-aos="fade-up"
+              className="font-semibold my-3 text-3xl md:text-5xl text-primary"
+            >
+              THE INDIAN METHOD
+            </h3>
+            <h3 data-aos="fade-in" className="font-semibold text-dark text-lg">
+              Vous ne verrez nul part une formation aussi poussé a ce prix la !{" "}
+            </h3>
+            <p data-aos="fade-in" className="italic text-[#121A1C] my-2">
+              Hésitez pas à demander un rendez-vous vocal gratuitement pour en
+              savoir plus !
+            </p>
+          </div>
+        </div>
+        <MemoIndianMethodPath className="w-full top-[20rem] absolute " />
+        <div className="grid appx mt-20 md:grid-cols-3 gap-6 relative z-20">
+          <div
+            data-aos="fade-up"
+            className="shadow bg-white p-6 rounded-lg h-fit flex items-center flex-col gap-3"
+          >
+            <svg
+              width="46"
+              height="46"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="3" y="3" width="40" height="40" rx="20" fill="#B6EBDF" />
+              <rect
+                x="3"
+                y="3"
+                width="40"
+                height="40"
+                rx="20"
+                stroke="#F7FFFD"
+                strokeWidth="6"
+              />
+              <path
+                d="M23.8333 14.6666L15.5 24.6666H23L22.1667 31.3333L30.5 21.3333H23L23.8333 14.6666Z"
+                stroke="black"
+                strokeWidth="1.66667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <h3 className="font-semibold text-dark">Bientôt Disponible</h3>
+            <h3 className="my-2 text-4xl text-dark font-bold">
+              {plans[0].amount}
+            </h3>
+            <img src={clock} className="opacity-20 h-40" alt="" />
+            <button className="bg-dark w-full rounded-md text-white py-2">
+              En savoir plus !
+            </button>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            className="shadow bg-white p-6 rounded-lg h-fit flex items-center flex-col gap-3"
+          >
+            <svg
+              width="46"
+              height="46"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="3" y="3" width="40" height="40" rx="20" fill="#B6EBDF" />
+              <rect
+                x="3"
+                y="3"
+                width="40"
+                height="40"
+                rx="20"
+                stroke="#F7FFFD"
+                strokeWidth="6"
+              />
+              <path
+                d="M14.6665 25.0833L22.9998 29.25L31.3332 25.0833M22.9998 16.75L14.6665 20.9167L22.9998 25.0833L31.3332 20.9167L22.9998 16.75Z"
+                stroke="black"
+                strokeWidth="1.66667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+
+            <h3 className="font-semibold text-dark">Formation Essentiel </h3>
+            <h3 className="my-2 text-4xl text-dark font-bold">
+              {plans[1].amount}
+            </h3>
+            <div className="flex text-[#475467] flex-col w-full gap-4 mb-2">
+              {[
+                { label: "Formation Personnalisé" },
+                { label: "Accompagnement à chaque vente*" },
+                { label: "Formation vocale (8 heures d'appel)" },
+                { label: "Support  vidéo ( 10 heures ) " },
+                { label: "Coaching vocal personnel" },
+                { label: "Accès à notre application" },
+                { label: "Formation qui évolue chaque mois" },
+                { label: "Discord d’entraide privé" },
+                { label: "Contactes indiens compétents " },
+                { label: "Accès à notre suite de logiciels " },
+              ].map((each) => (
+                <div className="flex items-center gap-2">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="24" height="24" rx="12" fill="#B6EBDF" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.0965 7.39004L9.9365 14.3L8.0365 12.27C7.6865 11.94 7.1365 11.92 6.7365 12.2C6.3465 12.49 6.2365 13 6.4765 13.41L8.7265 17.07C8.9465 17.41 9.3265 17.62 9.7565 17.62C10.1665 17.62 10.5565 17.41 10.7765 17.07C11.1365 16.6 18.0065 8.41004 18.0065 8.41004C18.9065 7.49004 17.8165 6.68004 17.0965 7.38004V7.39004Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <span>{each.label}</span>
+                </div>
+              ))}
+            </div>
+            <ScrollLink
+              className="bg-dark w-full rounded-md text-white py-2 text-center"
+              to="training"
+              scrollOn={"/our-training?plan=" + 1}
+            >
+              <button>En savoir plus !</button>
+            </ScrollLink>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            className="shadow bg-white p-6 rounded-lg h-fit flex items-center flex-col gap-3"
+          >
+            <svg
+              width="46"
+              height="46"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="3" y="3" width="40" height="40" rx="20" fill="#B6EBDF" />
+              <rect
+                x="3"
+                y="3"
+                width="40"
+                height="40"
+                rx="20"
+                stroke="#F7FFFD"
+                strokeWidth="6"
+              />
+              <path
+                d="M14.6665 25.0833L22.9998 29.25L31.3332 25.0833M22.9998 16.75L14.6665 20.9167L22.9998 25.0833L31.3332 20.9167L22.9998 16.75Z"
+                stroke="black"
+                strokeWidth="1.66667"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+
+            <h3 className="font-semibold text-dark">Formation Essentiel </h3>
+            <h3 className="my-2 text-4xl text-dark font-bold">
+              {plans[2].amount}
+            </h3>
+            <p className="text-[#475467] my-3">Inclus Formation Essentiel</p>
+            <div className="flex text-[#475467] flex-col w-full gap-4 mb-2">
+              {[
+                { label: "Support Prioritaire" },
+                { label: "Accès au meilleurs indiens" },
+                { label: "Suivi de vos performances" },
+                { label: "Acces à 100% de l’application " },
+                { label: "Logiciels supplémentaires" },
+                { label: "Réseau d’affaires exclusif" },
+                { label: "Contenu vidéo en + ( automatisation.. ) " },
+                { label: "Contact privilégié avec les formateurs" },
+                { label: "Formation vocale supplémentaire ( +4h )" },
+                {
+                  label: "Mentor personnel pour réaliser votre première vente",
+                },
+              ].map((each) => (
+                <div className="flex items-center gap-2">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="24" height="24" rx="12" fill="#B6EBDF" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.0965 7.39004L9.9365 14.3L8.0365 12.27C7.6865 11.94 7.1365 11.92 6.7365 12.2C6.3465 12.49 6.2365 13 6.4765 13.41L8.7265 17.07C8.9465 17.41 9.3265 17.62 9.7565 17.62C10.1665 17.62 10.5565 17.41 10.7765 17.07C11.1365 16.6 18.0065 8.41004 18.0065 8.41004C18.9065 7.49004 17.8165 6.68004 17.0965 7.38004V7.39004Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <span>{each.label}</span>
+                </div>
+              ))}
+            </div>
+            <ScrollLink
+              className="bg-dark w-full rounded-md text-white py-2 text-center"
+              to="training"
+              scrollOn={"/our-training?plan=" + 2}
+            >
+              <button>En savoir plus !</button>
+            </ScrollLink>
+          </div>
+        </div>
+      </div>
+
+      <div className="appx text-center" id="reviews">
+        <h3 data-aos="fade-up" className="text-4xl text-dark font-semibold">
+          Qu’est ce que on pense nos élèves{" "}
+        </h3>
+        <p data-aos="fade-up" className="text-sm text-tsec my-2">
+          Retrouvez tout nos avis sur Discord{" "}
+        </p>
+
+        <ReviewsContainer reviews={reviews1} />
+      </div>
       <Footer />
     </div>
   )

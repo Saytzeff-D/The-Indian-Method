@@ -13,12 +13,14 @@ import MemoMailRound from "../components/svgs/MailRound"
 import MemoSpeed from "../components/svgs/Speed"
 import MemoBars from "../components/svgs/Bars"
 import { Link } from "react-router-dom"
+import { links } from "../utils/constants"
+import ScrollLink from "../components/ScrollLink"
 
 const OurApplication = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div>
+      <div id="our-application">
         <div className="appx flex flex-col items-center text-center gap-8 pb-10 pt-16">
           <h3
             data-aos="fade-down"
@@ -33,15 +35,19 @@ const OurApplication = () => {
           </p>
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 md:gap-6 ">
             <Link
-              to={"https://www.youtube.com/@manusinauro"}
+              to={links.youtube}
               target="_blank"
               className="px-4 border-primary border rounded-md py-2.5 font-medium"
             >
               Vidéo de présentation
             </Link>
-            <button data-aos="fade-in" className="brand-btn">
-              Nous rejoindre
-            </button>
+            <ScrollLink
+              to="pricing"
+              className="brand-btn"
+              scrollOn={"/welcome"}
+            >
+              <button data-aos="fade-in">Nous rejoindre</button>
+            </ScrollLink>
           </div>
 
           <div data-aos="fade-up" className="mt-6 mb-2 relative max-w-[40rem]">

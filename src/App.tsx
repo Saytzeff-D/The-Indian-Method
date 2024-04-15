@@ -2,17 +2,18 @@ import "./App.css"
 import "aos/dist/aos.css"
 import { useEffect, useState } from "react"
 import AppRouter from "./Router"
+import AOS from "aos"
 
 function App() {
   useEffect(() => {
     setTimeout(() => {
       setShow(true)
+      setTimeout(() => {
+        AOS.refresh()
+      }, 700)
     }, 2500)
   }, [])
 
-  const generateAnimationDelay = (index: number) => {
-    return { animationDelay: `${index * 0.1}s` } // Adjust delay as needed
-  }
   const words = "THE INDIAN METHOD".split(" ")
   const [show, setShow] = useState(false)
 
@@ -20,18 +21,18 @@ function App() {
     <>
       <div className={` ${!show ? "" : ""}`}>
         <div
-          className={`flex bg-dark items-center justify-center overflow-hidden ${
+          className={`flex bg-dark transition-all duration-700 items-center justify-center overflow-hidden ${
             !show ? "h-screen" : "h-0"
           }`}
         >
           <div className="relative ">
-            <h3 className="cool bg-dark relative z-10 whitespace-nowrap overflow-hidden py-1 flex gap-3 uppercase font-inter text-5xl text-slate-700">
+            <h3 className="cool bg-dark overflow-hidden relative z-10 py-1 flex gap-3 uppercase font-inter text-5xl text-slate-400">
               {words.map((word, index) => (
                 <span
                   className="relative"
-                  key={index}
+                  key={index + "span"}
                   data-text={word}
-                  style={generateAnimationDelay(index)}
+                  style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   {word}
                 </span>
