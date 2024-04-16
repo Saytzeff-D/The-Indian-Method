@@ -108,9 +108,13 @@ const IndianMethod = () => {
               de l'optimisation des processus d'affaires.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 md:gap-6 ">
-              <button className="px-10 flex items-center gap-3 bg-primary rounded-full text-white py-2.5 font-medium">
-                Qui sommes-nous ?
-              </button>
+              <ScrollLink
+                className="flex items-center gap-3 bg-primary rounded-full text-white font-medium"
+                scrollOn={"/who-we-are"}
+                to="founders-top"
+              >
+                <button className="px-10 py-2.5">Qui sommes-nous ?</button>
+              </ScrollLink>
               <Link
                 to={links.youtube}
                 target="_blank"
