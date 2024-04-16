@@ -19,7 +19,7 @@ const Navbar = () => {
       </div>
       <div
         className={`sticky transition-all duration-500 z-40 top-0 bg-white shadow overflow-hidden ${
-          navIsOpen ? "h-[30rem] lg:h-auto" : "h-[5.6rem] lg:h-auto"
+          navIsOpen ? "h-[37rem] lg:h-auto" : "h-[5.6rem] lg:h-auto"
         }`}
       >
         <div className="flex py-4 appx items-center justify-between lg:hidden">
@@ -38,7 +38,7 @@ const Navbar = () => {
         <div
           className={`flex flex-col lg:flex-row ${
             navIsOpen ? "" : ""
-          } px-5 lg:text-center lg:items-center gap-2 md:gap-3 xl:gap-6 justify-center py-5`}
+          } px-5 lg:text-center lg:items-center gap-2 md:gap-3 justify-center py-5`}
         >
           {navLinks.map((each) => (
             <ScrollLink

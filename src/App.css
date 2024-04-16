@@ -4,7 +4,7 @@
 }
 
 .stroke {
-  animation: stroke 1.2s ease-in-out forwards 0.8s;
+  animation: stroke 1.2s ease-in-out forwards 1.3s;
 }
 
 @keyframes stroke {

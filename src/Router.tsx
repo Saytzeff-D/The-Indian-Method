@@ -25,7 +25,7 @@ function AppRouter() {
           <Route element={<Navigate to={"/welcome"} />} path="" />
           <Route Component={Welcome} path="welcome" />
           <Route Component={Training} path="our-training" />
-          <Route Component={FoundersAndHistory} path="notice" />
+          <Route Component={FoundersAndHistory} path="/who-we-are" />
           <Route Component={IndianMethod} path="indian-method" />
           <Route Component={BecomeSponsor} path="become-sponsor" />
           <Route Component={FAQs} path="faqs" />

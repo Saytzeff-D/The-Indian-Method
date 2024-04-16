@@ -11,7 +11,7 @@ function App() {
       setTimeout(() => {
         AOS.refresh()
       }, 700)
-    }, 2500)
+    }, 3000)
   }, [])
 
   const words = "THE INDIAN METHOD".split(" ")
@@ -26,7 +26,7 @@ function App() {
           }`}
         >
           <div className="relative ">
-            <h3 className="cool bg-dark overflow-hidden relative z-10 py-1 flex  items-center justify-center gap-3 uppercase font-inter text-3xl sm:text-5xl text-slate-400">
+            <h3 className="cool bg-dark overflow-hidden relative z-10 py-1 flex items-center gap-3 uppercase font-inter text-3xl sm:text-5xl text-slate-400">
               {words.map((word, index) => (
                 <span
                   className="relative"
@@ -38,7 +38,7 @@ function App() {
                 </span>
               ))}
             </h3>
-            <span className="stroke skew-x-[25deg] left-1/2 top-1/2 -rotate-[60deg] -translate-x-1/2 -translate-y-1/2 absolute h-1.5 bg-white"></span>
+            <span className="stroke skew-x-[25deg] left-1/2 top-1/2 -rotate-[65deg] -translate-x-1/2 -translate-y-1/2 absolute h-1.5 bg-white"></span>
           </div>
         </div>
         <>

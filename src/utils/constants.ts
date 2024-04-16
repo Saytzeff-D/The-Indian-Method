@@ -6,6 +6,7 @@ export const navLinks = [
 	{ whole: true, label: "Parrainage", scrollOn: "/sponsorship", to: "sponsorship" },
 	{ whole: true, label: "FAQ", scrollOn: "/faqs", to: "faqs-top" },
 	{ whole: true, label: "Contact", to: "/contact", },
+	{ whole: true, label: "Qui sommes nou?", to: "founders-top", scrollOn: "/who-we-are", },
 	{ whole: false, label: "Nos formations", to: "pricing", scrollOn: "/welcome", },
 ]
 

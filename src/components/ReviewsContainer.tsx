@@ -8,16 +8,24 @@ const ReviewsContainer = ({
   reviews: { name: string; label: string; desc: string }[]
 }) => {
   const scrollContainer = useRef<HTMLDivElement>(null)
+  const scroll = (value: number) => {
+    if (
+      scrollContainer.current !== null &&
+      scrollContainer.current !== undefined
+    ) {
+      scrollContainer.current.scrollLeft += value
+    }
+  }
   return (
     <div className="relative max-w-full">
       <button
-        onClick={() => (scrollContainer.current.scrollLeft -= 200)}
-        className="mx-auto hidden lg:block min-w-[2rem] absolute -left-6 xl:-left-16 bottom-56 z-20  rotate-180"
+        onClick={() => scroll(-200)}
+        className="mx-auto hidden lg:block min-w-[2rem] absolute -left-6 xl:-left-16 bottom-56 z-20 rotate-180"
       >
         <MemoScrollArrow />
       </button>
       <button
-        onClick={() => (scrollContainer.current.scrollLeft += 200)}
+        onClick={() => scroll(200)}
         className="mx-auto hidden lg:block min-w-[2rem] absolute -right-6 xl:-right-16 bottom-56 z-20"
       >
         <MemoScrollArrow />

@@ -11,7 +11,7 @@ import MemoCamera from "../components/svgs/Camera"
 import MemoBookCheck from "../components/svgs/BookCheck"
 import MemoSettings from "../components/svgs/Settings"
 import MemoPhoneCall from "../components/svgs/PhoneCall"
-import { useParams } from "react-router"
+import { useLocation } from "react-router"
 import { plans } from "../utils/constants"
 import ScrollLink from "../components/ScrollLink"
 import { useState } from "react"
@@ -238,7 +238,9 @@ const Training = () => {
     },
   }
 
-  const { plan } = useParams()
+  const location = useLocation()
+  const searchParams = new URLSearchParams(location.search)
+  const plan = searchParams.get("plan")
   const [step, setstep] = useState<number>(1)
 
   return (
