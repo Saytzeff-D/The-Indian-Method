@@ -17,12 +17,12 @@ const FoundersAndHistory = () => {
     <div className="flex min-h-screen flex-col">
       <Navbar />
 
-      <div id="founders-top" className="appx py-20">
+      <div id="founders-top" className="appx py-10 md:py-20">
         <div
           data-aos="fade-up"
           className="flex text-center flex-col gap-6 m-auto max-w-[50rem]"
         >
-          <h3 className="md:text-5xl mt-10 md:mt-0 text-3xl font-semibold text-dark">
+          <h3 className="md:text-5xl text-3xl font-semibold text-dark">
             Notre communauté
           </h3>
           <h3
@@ -33,7 +33,7 @@ const FoundersAndHistory = () => {
               backgroundImage:
                 "linear-gradient(90deg, #396F63 0%, #17AD8B 100%)",
             }}
-            className="md:text-5xl mt-10 md:mt-0 text-3xl font-semibold"
+            className="md:text-5xl text-3xl font-semibold"
           >
             unie par la diversité du monde entier
           </h3>
@@ -92,10 +92,7 @@ const FoundersAndHistory = () => {
           Les fondateurs & Co- fondateurs
         </h3>
 
-        <div
-          data-aos="fade-up"
-          className="grid py-20 md:grid-cols-3 max-w-[60rem] gap-10"
-        >
+        <div className="grid py-20 md:grid-cols-3 max-w-[60rem] gap-10">
           <Founder
             name="Roméo"
             position="Fondateur"
@@ -162,12 +159,16 @@ const FoundersAndHistory = () => {
             desc: `Lancement réussi de la nouvelle application et de la suite de logiciels.`,
           },
         ].map((each) => (
-          <div data-aos="fade-in" className="w-full grid grid-cols-12">
-            <h3 className="col-span-4 md:col-span-6 mt-14 text-right px-4 md:px-10 text-3xl text-primary font-semibold">
+          <div
+            data-aos="fade-in"
+            // data-aos-delay="-1000"
+            className="w-full grid grid-cols-12"
+          >
+            <h3 className="col-span-5 md:col-span-6 mt-14 text-right px-4 md:px-10 text-xl sm:text-3xl text-primary font-semibold">
               {each.year}
             </h3>
             <p
-              className="pb-10 md:pb-20 pt-[3.6rem] relative border-l-4 border-tsec/30 px-4 md:px-10 max-w-md font-semibold text-dark col-span-8 md:col-span-6 before:content-[''] before:absolute before:h-3 before:w-3 before:bg-dark2 before:rounded-full before:top-16 before:-left-2"
+              className="text-sm sm:text-base pb-5 sm:pb-10 md:pb-20 pt-[3.6rem] relative border-l-4 border-tsec/30 px-4 md:px-10 max-w-md font-semibold text-dark col-span-7 md:col-span-6 before:content-[''] before:absolute before:h-3 before:w-3 before:bg-dark2 before:rounded-full before:top-16 before:-left-2"
               dangerouslySetInnerHTML={{ __html: each.desc }}
             ></p>
           </div>
@@ -250,7 +251,7 @@ const Founder = ({
   other?: JSX.Element
 }) => {
   return (
-    <div className=" flex flex-col gap-3">
+    <div data-aos="fade-up" className=" flex flex-col gap-3">
       <div className="flex max-w-[18rem] h-[18rem] items-center justify-center overflow-hidden rounded-2xl ">
         <img
           src={image ?? pp}
