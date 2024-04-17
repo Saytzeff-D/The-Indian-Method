@@ -8,6 +8,8 @@ import ScrollLink from "../components/ScrollLink"
 import { Link } from "react-router-dom"
 import { links, plans, reviews1 } from "../utils/constants"
 import ReviewsContainer from "../components/ReviewsContainer"
+import ReactVisibilitySensor from "react-visibility-sensor"
+import CountUp from "react-countup"
 
 const Welcome = () => {
   return (
@@ -96,34 +98,44 @@ const Welcome = () => {
           dès aujourd'hui.
         </h3>
 
-        <div className="grid my-10 grid-cols-2 md:grid-cols-4 gap-5">
-          <div data-aos="zoom-in-up" className="flex flex-col items-center">
-            <h3 className="text-dark text-3xl font-semibold">
-              4 <span className="text-primary">ans</span>
-            </h3>
-            <h3 className="text-lg font-semibold text-dark">D’expérience</h3>
-          </div>
-          <div data-aos="zoom-in-up" className="flex flex-col items-center">
-            <h3 className="text-dark text-3xl font-semibold">
-              86 <span className="text-primary">+</span>
-            </h3>
-            <h3 className="text-lg font-semibold text-dark">
-              Partenaires Indiens
-            </h3>
-          </div>
-          <div data-aos="zoom-in-up" className="flex flex-col items-center">
-            <h3 className="text-dark text-3xl font-semibold">
-              300 <span className="text-primary">+</span>
-            </h3>
-            <h3 className="text-lg font-semibold text-dark">Elèves</h3>
-          </div>
-          <div data-aos="zoom-in-up" className="flex flex-col items-center">
-            <h3 className="text-dark text-3xl font-semibold">
-              10 <span className="text-primary">+</span>
-            </h3>
-            <h3 className="text-lg font-semibold text-dark">Pays</h3>
-          </div>
-        </div>
+        <ReactVisibilitySensor partialVisibility offset={{ bottom: 200 }}>
+          {({ isVisible }: { isVisible: boolean }) => (
+            <div className="grid my-10 grid-cols-2 md:grid-cols-4 gap-5">
+              <div data-aos="zoom-in-up" className="flex flex-col items-center">
+                <h3 className="text-dark text-3xl font-semibold">
+                  {isVisible ? <CountUp delay={0.5} end={4} /> : null}{" "}
+                  <span className="text-primary">ans</span>
+                </h3>
+                <h3 className="text-lg font-semibold text-dark">
+                  D’expérience
+                </h3>
+              </div>
+              <div data-aos="zoom-in-up" className="flex flex-col items-center">
+                <h3 className="text-dark text-3xl font-semibold">
+                  {isVisible ? <CountUp delay={0.5} end={86} /> : null}{" "}
+                  <span className="text-primary">+</span>
+                </h3>
+                <h3 className="text-lg font-semibold text-dark">
+                  Partenaires Indiens
+                </h3>
+              </div>
+              <div data-aos="zoom-in-up" className="flex flex-col items-center">
+                <h3 className="text-dark text-3xl font-semibold">
+                  {isVisible ? <CountUp delay={0.5} end={300} /> : null}{" "}
+                  <span className="text-primary">+</span>
+                </h3>
+                <h3 className="text-lg font-semibold text-dark">Elèves</h3>
+              </div>
+              <div data-aos="zoom-in-up" className="flex flex-col items-center">
+                <h3 className="text-dark text-3xl font-semibold">
+                  {isVisible ? <CountUp delay={0.5} end={10} /> : null}{" "}
+                  <span className="text-primary">+</span>
+                </h3>
+                <h3 className="text-lg font-semibold text-dark">Pays</h3>
+              </div>
+            </div>
+          )}
+        </ReactVisibilitySensor>
       </div>
 
       <img

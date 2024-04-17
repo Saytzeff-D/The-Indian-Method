@@ -1,22 +1,61 @@
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
-import man1 from "../assets/man1.png"
 import pp from "../assets/pp.png"
 import MemoUserAccount from "../components/svgs/UserAccount"
 import MemoBag from "../components/svgs/Bag"
-import MemoPhoneGreen from "../components/svgs/PhoneGreen"
 import Reussite from "../assets/Reussite.png"
 import evolution from "../assets/evolution.png"
 import Qualite from "../assets/Qualite.png"
 import Communaute from "../assets/Communaute.png"
 import ScrollLink from "../components/ScrollLink"
+import MemoMapWrap from "../components/svgs/MapWrap"
+import romeo from "../assets/romeo.png"
+import sacha from "../assets/sacha.png"
 
 const FoundersAndHistory = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
 
-      <div
+      <div id="founders-top" className="appx py-20">
+        <div
+          data-aos="fade-up"
+          className="flex text-center flex-col gap-6 m-auto max-w-[50rem]"
+        >
+          <h3 className="md:text-5xl mt-10 md:mt-0 text-3xl font-semibold text-dark">
+            Notre communauté
+          </h3>
+          <h3
+            style={{
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+              backgroundImage:
+                "linear-gradient(90deg, #396F63 0%, #17AD8B 100%)",
+            }}
+            className="md:text-5xl mt-10 md:mt-0 text-3xl font-semibold"
+          >
+            unie par la diversité du monde entier
+          </h3>
+
+          <div className="bg-[#D0D5DD] h-1.5 max-w-[30rem] mx-auto mb-10 w-full"></div>
+
+          <MemoMapWrap className="" />
+          <p className="text-dark my-10">
+            Chez The Indian Method, nous réinventons la formation
+            professionnelle en ligne. Fondée par Roméo, un passionné
+            d'entrepreneuriat et de technologie, notre entreprise s'est donnée
+            pour mission de transformer radicalement l'approche traditionnelle
+            des formations en ligne. À travers nos cours interactifs, soutenus
+            par des appels vocaux et des modules ciblés, nous proposons une
+            expérience d'apprentissage complète et engageante. Notre engagement
+            envers la qualité, l'évolution constante et la construction d'une
+            communauté solide forme le socle de notre philosophie. Chez nous,
+            chaque cours est une pierre posée sur le chemin de votre succès.
+          </p>
+        </div>
+      </div>
+      {/* <div
         id="founders-top"
         className="appx grid md:grid-cols-2 min-h-[70vh] gap-4 lg:gap-10"
       >
@@ -43,14 +82,14 @@ const FoundersAndHistory = () => {
             alt=""
           />
         </div>
-      </div>
+      </div> */}
 
       <div className="appx flex flex-col items-center">
         <h3
           data-aos="fade-up"
           className="text-2xl md:text-3xl mt-10 md:mt-0 font-semibold text-center"
         >
-          Les fondateurs & CEO
+          Les fondateurs & Co- fondateurs
         </h3>
 
         <div
@@ -60,19 +99,19 @@ const FoundersAndHistory = () => {
           <Founder
             name="Roméo"
             position="Fondateur"
-            other={<Tag value="Formateur" icon={<MemoPhoneGreen />} />}
-            note={`Roméo, un entrepreneur animé par sa passion pour la technologie, a passé sept ans à naviguer dans le secteur de la vente de sites internet en France. Son parcours l'a mené à fonder récemment "L'Indian Method".`}
+            image={romeo}
+            note={`Roméo a transformé sa passion pour la création de sites Web et l'entrepreneuriat en une plateforme de formation révolutionnaire. Son but est de faire croître une communauté privée forte et d'organiser des événements qui connectent et enrichissent.`}
           />
           <Founder
             name="Raphaël"
             position="Co-Fondateur "
-            other={<Tag value="Développeur" icon={<MemoPhoneGreen />} />}
-            note={`Suite à une série de ventes réussies de plateformes en ligne, Raphaël s'est associé avec Roméo pour lancer une nouvelle initiative nommée "L'Indian Method".`}
+            note={`Raphaël / Kwi , co-fondateur, gère l'administration et le recrutement. Il est essentiel au fonctionnement efficace de notre entreprise et à l'optimisation de nos processus internes.`}
           />
           <Founder
             name="Sacha"
+            image={sacha}
             position="Administrateur"
-            note={`Un jeune résident belge, ayant quitté le système éducatif à l'âge de 9 ans, s'est lancé dans le commerce d'articles de seconde main, parvenant à générer un revenu annuel de 715 euros. Il vit en Belgique avec une partenaire plus âgée.`}
+            note={`Sacha s'occupe de la satisfaction des clients, de l'image de marque, et de la gestion des événements. Son rôle est vital pour maintenir la qualité et l'engagement au sein de notre communauté.`}
           />
         </div>
       </div>
@@ -86,38 +125,41 @@ const FoundersAndHistory = () => {
         </h3>
 
         {[
-          { year: "2019", desc: "Découverte de la vente de Site Web" },
           {
-            year: "2020",
-            desc: "Déléguée le travail à des développeurs Francais par manque de temps ",
+            year: "Début 2022",
+            desc: "Début de la création de sites web, premier site vendu à une laverie.",
           },
           {
-            year: "2021",
-            desc: "Les développeurs Français coutent trop cher nous arrêtons de les employer.",
+            year: "Fin 2022",
+            desc: "Décision de déléguer le travail à des Indiens pour réduire les coûts.",
           },
           {
-            year: "2023",
-            desc: "Invention de L’Indian method",
+            year: "Début 2023",
+            desc: "Réalisation du premier chiffre d'affaires de 10000 € en un mois.",
           },
           {
-            year: "2023",
-            desc: "Conception de la formation “Indian Method. <br/> Génère plus de 50k à l’année grâce à L’indian Method à 16 ans",
+            year: "Mai 2023",
+            desc: `Lancement de "The Indian Method" suite au succès rencontré sur Tiktok. `,
           },
           {
-            year: "P1-2023",
-            desc: "Finissions de la formation <br/> <br/> Recrute une équipe",
+            year: "Été 2023",
+            desc: `Préparation des formations et recrutement d'une équipe de 50 Indiens qualifiés.`,
           },
           {
-            year: "P2-2023",
-            desc: "Publication de la formation “Indian Method”",
+            year: "Août 2023",
+            desc: "Début des ventes des formations.",
           },
           {
-            year: "P1-2024",
-            desc: "L’influence de la formation “Indian method” explose <br/> <br/> Génère plus de 20k par mois à 1è ans grâce a l’Indian method <br/> <br/> Plus de 10k de membres",
+            year: "Novembre 2023",
+            desc: `Doublement des ventes avec 200 formations vendues. Franchissement du cap des 10 000 membres dans la communauté.`,
           },
           {
-            year: "P2-2024",
-            desc: "Lancement de l’application “Indian Method”",
+            year: "Fevrier 2024",
+            desc: `Pause dans les ventes pour se concentrer sur un nouveau plan marketing et le développement de l'application.`,
+          },
+          {
+            year: "Mai 2024...",
+            desc: `Lancement réussi de la nouvelle application et de la suite de logiciels.`,
           },
         ].map((each) => (
           <div data-aos="fade-in" className="w-full grid grid-cols-12">
@@ -198,20 +240,26 @@ const Founder = ({
   note,
   other,
   name,
+  image,
   position,
 }: {
   note: string
   name: string
+  image?: string
   position: string
   other?: JSX.Element
 }) => {
   return (
     <div className=" flex flex-col gap-3">
-      <img
-        src={pp}
-        className="rounded-2xl max-w-[18rem]"
-        alt="Display Picture"
-      />
+      <div className="flex max-w-[18rem] h-[18rem] items-center justify-center overflow-hidden rounded-2xl ">
+        <img
+          src={image ?? pp}
+          className={`w-[120%] h-[120%] object-cover ${
+            name == "Roméo" ? "object-[50%_10%]" : ""
+          }`}
+          alt="Display Picture"
+        />
+      </div>
       <Tag value={name} icon={<MemoUserAccount />} />
       <Tag value={position} icon={<MemoBag />} />
       {other}
